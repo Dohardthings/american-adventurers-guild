@@ -10,6 +10,7 @@ export default Ember.Controller.extend({
       })
       .catch((reason) => {
         console.log(reason);
+        window.alert(`The email or password doesn't match our records. Please try again`)
       });
   },
 });
