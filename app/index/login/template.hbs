@@ -1,1 +1,22 @@
-{{outlet}}
+<div class="title-container">
+  <h2 class="register-title">Login</h2>
+</div>
+
+<div class="main-container">
+  <div class="form-container">
+    <form class="registration" {{action login model on="submit"}}>
+
+      <p class="form-input">
+        <label class="form-label">Email</label>
+        {{input class="input-field" type="text" placeholder="Email" value=model.email}}
+      </p>
+
+      <p class="form-input">
+        <label class="form-label">Password</label>
+        {{input class="input-field" type="password" placeholder="Password" value=model.password}}
+      </p>
+
+      <button class="save">Login</button>
+    </form>
+  </div>
+</div>
