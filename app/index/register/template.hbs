@@ -1,1 +1,32 @@
-{{outlet}}
+<div class="title-container">
+  <h2 class="register-title">Register</h2>
+</div>
+
+<div class="main-container">
+  <div class="form-container">
+    <form class="registration" {{action newUser model on="submit"}}>
+
+      <p class="form-input">
+        <label class="form-label">Email</label>
+        {{input class="input-field" type="text" placeholder="Email" value=model.email}}
+      </p>
+
+      <p class="form-input">
+        <label class="form-label">Username</label>
+        {{input class="input-field" type="text" placeholder="Username" value=model.username}}
+      </p>
+
+      <p class="form-input">
+        <label class="form-label">Password</label>
+        {{input class="input-field" type="password" placeholder="Password" value=model.password}}
+      </p>
+
+      <p class="form-input">
+        <label class="form-label">Phone Number</label>
+        {{input class="input-field" type="number" placeholder="Phone Number" value=model.phoneNumber}}
+      </p>
+
+      <button class="save">Save</button>
+    </form>
+  </div>
+</div>
