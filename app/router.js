@@ -11,7 +11,10 @@ Router.map(function() {
   this.route(`index`, { path: `/` }, function() {
     this.route(`register`);
     this.route(`login`);
+    this.route('about');
+    this.route('how');
   });
+  this.route('events');
 });
 
 export default Router;
