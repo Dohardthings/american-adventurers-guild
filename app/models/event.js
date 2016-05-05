@@ -1,6 +1,6 @@
 import Model from 'ember-data/model';
 import attr from 'ember-data/attr';
-import { hasOne } from 'ember-data/relationships';
+import { belongsTo } from 'ember-data/relationships';
 
 export default Model.extend({
   name: attr(),
@@ -10,5 +10,5 @@ export default Model.extend({
   active: attr(`boolean`, { defaultValue: true }),
   description: attr(),
   searchArea: attr(),
-  prize: hasOne(`prize`),
+  prize: belongsTo(`prize`),
 });
