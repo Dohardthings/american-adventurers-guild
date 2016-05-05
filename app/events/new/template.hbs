@@ -1,1 +1,40 @@
-{{outlet}}
+<div class="title-container">
+  <h1 class="new-title">New Event</h1>
+</div>
+
+<div class="form-container">
+  <form class="new-event__form">
+
+    <p class="form-input">
+      <label class="form-label">Event Name</label>
+      {{input class="input-field" type="text" placeholder="Name" value=model.name}}
+    </p>
+
+    <p class="form-input">
+      <label class="form-label">Event Type</label>
+      {{input class="input-field" type="text" placeholder="Type" value=model.type}}
+    </p>
+
+    <p class="form-input">
+      <label class="form-label">Event Cost</label>
+      {{input class="input-field" type="number" placeholder="Cost" value=model.Cost}}
+    </p>
+
+    <p class="form-input">
+      <label class="form-label">Estimated Time to Complete</label>
+      {{input class="input-field" type="text" placeholder="ETC" value=model.etc}}
+    </p>
+
+    <p class="form-input">
+      <label class="form-label">Description</label>
+      {{textarea class="input-field" placeholder="Desc." value=model.description}}
+    </p>
+
+    <p class="form-input">
+      <label class="form-label">Search Area</label>
+      {{input class="input-field" type="text" placeholder="Search Area." value=model.searchArea}}
+    </p>
+
+
+  </form>
+</div>
