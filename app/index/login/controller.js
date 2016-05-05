@@ -6,10 +6,11 @@ export default Ember.Controller.extend({
   login({ email, password }) {
     this.get(`session`).authenticate(`authenticator:application`, email, password)
       .then(() => {
-        this.transitionToRoute(`index`);
+        this.transitionToRoute(`events`);
       })
       .catch((reason) => {
         console.log(reason);
+        window.alert(`Your email or password did not match our records. Please try again`);
       });
   },
 });

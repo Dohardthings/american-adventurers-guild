@@ -6,6 +6,10 @@ export default Ember.Controller.extend({
 
     member.save().then(() => {
       this.transitionToRoute(`index`);
-    });
+    })
+    .catch((reason) => {
+      console.log(reason);
+      window.alert(`Something went wrong. Please try again`);
+    });;
   },
 });
