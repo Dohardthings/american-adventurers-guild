@@ -14,7 +14,9 @@ Router.map(function() {
     this.route('about');
     this.route('how');
   });
-  this.route('events');
+  this.route('events', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
