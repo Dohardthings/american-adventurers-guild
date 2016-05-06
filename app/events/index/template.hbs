@@ -10,12 +10,9 @@
     <li>
       <p>{{event.name}}</p>
       <p>{{event.type}}</p>
-      <p>{{event.cost}}</p>
-      <p>{{event.description}}</p>
       <p>{{event.etc}}</p>
-      <p>{{event.prize}}</p>
+      <p>{{event.prize.name}}</p>
       <p>{{event.searchArea}}</p>
-      <p>{{event.active}}</p>
       {{#link-to "events.details" event.id}}
       <button>Details</button>
       {{/link-to}}

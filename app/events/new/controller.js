@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   saveEvent(attr) {
-    debugger;
     const eventAttrs = Ember.getProperties(attr, [
       `name`,
       `type`,
