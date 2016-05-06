@@ -1,1 +1,12 @@
-{{outlet}}
+{{#link-to "events"}}
+  <button>Events</button>
+{{/link-to}}
+
+<div class="main-container">
+  {{#simple-form}}
+    <h1>DETAILS</h1>
+<h2>
+  {{model.name}}
+</h2>
+  {{/simple-form}}
+</div>
