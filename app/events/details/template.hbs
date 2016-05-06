@@ -3,10 +3,39 @@
 {{/link-to}}
 
 <div class="main-container">
-  {{#simple-form}}
-    <h1>DETAILS</h1>
-<h2>
-  {{model.name}}
-</h2>
-  {{/simple-form}}
+  <h1>DETAILS</h1>
+  <h2>
+    {{model.name}}
+  </h2>
+  <p>{{model.description}}</p>
+  <p>{{model.active}}</p>
+  <p>{{model.cost}}</p>
+
+
+  <h1>Treasure</h1>
+  <h3>{{model.prize.name}}</h3>
+  <h3>{{model.prize.imgUrl}}</h3>
+  <p>{{model.prize.description}}</p>
 </div>
+
+  {{!-- USER SHOUDL NOT SEE THIS --}}
+
+  {{#simple-form onsubmit=(action savePrize model) as |formStuff|}}
+
+    <p class="form-input">
+      <label class="form-label">Prize Name</label>
+      {{input class="input-field" type="text" placeholder="Name" value=formStuff.name}}
+    </p>
+
+    <p class="form-input">
+      <label class="form-label">Prize Image</label>
+      {{input class="input-field" type="text" placeholder="Img" value=formStuff.imgUrl}}
+    </p>
+
+    <p class="form-input">
+      <label class="form-label">Prize Description</label>
+      {{textarea class="input-field" placeholder="Desc." value=formStuff.description}}
+    </p>
+    <button>Save</button>
+
+  {{/simple-form}}
