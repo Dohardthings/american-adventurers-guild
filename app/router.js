@@ -16,7 +16,9 @@ Router.map(function() {
   });
   this.route('events', function() {
     this.route('new');
-    this.route('details', { path: `/:event_id` });
+    this.route('details', { path: `/:event_id` }, function() {
+      this.route('clues');
+    });
   });
 });
 
