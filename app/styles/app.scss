@@ -25,6 +25,7 @@ body {
   padding-left: 5em;
   border: 1px solid #d4e0d7;
   border-radius: $corner-radius;
+  outline: none;
   color: #c2711c;
   font-family: 'Exo 2', sans-serif;
   font-size: 0.5rem;
@@ -91,4 +92,8 @@ body {
 .how-list {
   color: white;
 
+}
+.about-us {
+  font-size: 1.6rem;
+background:url('http://a.rgbimg.com/cache1ra6jH/users/y/yd/ydiot/300/nc6VSve.jpg')
 }
