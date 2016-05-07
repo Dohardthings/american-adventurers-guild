@@ -10,6 +10,6 @@ export default Ember.Controller.extend({
     .catch((reason) => {
       console.log(reason);
       window.alert(`Something went wrong. Please try again`);
-    });;
+    });
   },
 });
