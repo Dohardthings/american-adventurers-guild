@@ -19,7 +19,15 @@
 
   <h3>Interested</h3>
 
-  <button class="btn btn-buy">Buy</button>
+{{#if model.active}}
+<p>Unavailable for Purchase</p>
+
+  {{else}}
+  <button {{action buyThis model.id}} class="btn btn-buy">Buy</button>
+
+
+  {{/if}}
+
 </div>
 
 

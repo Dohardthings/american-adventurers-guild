@@ -7,4 +7,11 @@ export default Ember.Controller.extend({
 
     prize.save();
   },
+  buyThis() {
+    if (window.confirm(`Are you sure you want to purchase this?`)) {
+      debugger;
+      this.model.toggleProperty(`active`);
+      this.transitionToRoute(`clues`);
+    }
+  },
 });
