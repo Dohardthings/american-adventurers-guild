@@ -7,7 +7,7 @@ export default Model.extend({
   type: attr(),
   cost: attr(`number`),
   etc: attr(),
-  active: attr(`boolean`, { defaultValue: true }),
+  active: attr(`boolean`, { defaultValue: false }),
   description: attr(),
   searchArea: attr(),
   prize: belongsTo(`prize`),
