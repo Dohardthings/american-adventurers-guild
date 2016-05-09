@@ -1,25 +1,17 @@
 <div class="main-container">
-{{#link-to "index.how"}}
-<button class="btn login-btn">How It Works</button>
-{{/link-to}}
-{{#link-to "index.about"}}
-<button class="btn login-btn">About</button>
-{{/link-to}}
-{{#link-to "events"}}
-<button class="btn login-btn">Events</button>
-{{/link-to}}
-{{#link-to "index.register"}}
-  <button class="btn register-btn">Register</button>
-{{/link-to}}
-
-{{#link-to "index.login"}}
-<button class="btn login-btn">Login</button>
-{{/link-to}}
 
   <p>
     {{session.session.content.authenticated.user.username}}
   </p>
 
-
  {{outlet}}
+
+ <h1>Who we are</h1>
+
+ <p class="about-us">The American Adventurer's Guild was founded to re-introduce some adventure back into our lives.
+     We believe that Adventure, thrills, and freedom from boredom are not extras in life, but nessisary for happiness.
+     For that reason we design adventures in the form of treasure hunts for our customers.....
+     hunts for real treasure like bullion and gems, as well as artifacts and artwork.  Once you finish your experience,
+      you will have something to keep forever that you can tell your friends and family about!</p>
+
 </div>

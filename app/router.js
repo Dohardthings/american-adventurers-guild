@@ -9,10 +9,9 @@ Router.map(function() {
   this.route(`logout`);
 
   this.route(`index`, { path: `/` }, function() {
+    this.route('about');
     this.route(`register`);
     this.route(`login`);
-    this.route('about');
-    this.route('how');
   });
   this.route('events', function() {
     this.route('new');
