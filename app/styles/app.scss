@@ -11,6 +11,7 @@ $corner-radius: 5px;
 
 body {
   margin: 0;
+  text-shadow: 2px 2px 1px #000000;
 
 }
 
@@ -30,8 +31,7 @@ body {
 .site-heading {
   color: #c2711c;
   font-family: herculanum;
-
-
+  text-align: center;
 }
 
 .btn {
@@ -44,13 +44,13 @@ body {
   outline: none;
   background: transparent;
   color: #c2711c;
-  text-shadow: 2px 2px 1px #000000;
   font-family: 'Exo 2', sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 3em;
   text-align: center;
   text-decoration: none;
+  text-shadow: 2px 2px 1px #000000;
   text-transform: uppercase;
 
 
