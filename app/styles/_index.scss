@@ -1,0 +1,25 @@
+
+.site-container {
+  background-image:url('http://www.publicdomainpictures.net/pictures/30000/nahled/old-background-1350553716qhs.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.how-list {
+  color: white;
+
+}
+.about-us {
+  font-size: 1.2rem;
+  color: white;
+// background:url('http://cdn1.listovative.com/wp-content/uploads/2015/08/hidden-treasure-around-the-world.jpg')
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
