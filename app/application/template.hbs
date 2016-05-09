@@ -1,4 +1,30 @@
 <div class="site-container">
-<h1 class="site-heading">The American Adventurer's Guild</h1>
+
+
+<div class="title-container">
+  {{#link-to 'index'}}
+    <h1 class="site-heading">The American Adventurer's Guild</h1>
+  {{/link-to}}
+</div>
+
+<nav class="top-nav">
+
+  <div class="links-container">
+    {{#link-to "index.about"}}
+    <button class="btn login-btn">About</button>
+    {{/link-to}}
+    {{#link-to "events"}}
+    <button class="btn login-btn">Events</button>
+    {{/link-to}}
+    {{#link-to "index.register"}}
+      <button class="btn register-btn">Register</button>
+    {{/link-to}}
+
+    {{#link-to "index.login"}}
+    <button class="btn login-btn">Login</button>
+    {{/link-to}}
+  </div>
+
+</nav>
 {{outlet}}
 </div>
