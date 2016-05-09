@@ -20,13 +20,15 @@
   <h3>Interested</h3>
 
 {{#if model.active}}
-<p>Unavailable for Purchase</p>
 
-  {{else}}
+<p>This event is unavailable for purchase.</p>
+
+{{else}}
+
   <button {{action buyThis model.id}} class="btn btn-buy">Buy</button>
 
+{{/if}}
 
-  {{/if}}
 
 </div>
 
@@ -53,3 +55,4 @@
     <button>Save</button>
 
   {{/simple-form}}
+{{outlet}}
