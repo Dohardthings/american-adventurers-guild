@@ -1,15 +1,15 @@
 <h1>CLUES</h1>
 
-<h2>Add A Clue</h2>
-
 <ul>
   {{#each model.clues as |clue|}}
   <li>
     <p>{{clue.description}}</p>
   </li>
   {{/each }}
+
 </ul>
 
+<h2>Add A Clue</h2>
 {{#simple-form class="new-event__form" onsubmit=(action saveClue model) as |clue|}}
 
   <p class="form-input">
