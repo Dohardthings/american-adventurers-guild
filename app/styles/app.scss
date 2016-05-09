@@ -39,13 +39,15 @@ body {
   position: relative;
   padding-right: 5em;
   padding-left: 5em;
-  border: 1px solid #d4e0d7;
+  border: 0px solid #d4e0d7;
   border-radius: $corner-radius;
   outline: none;
+  background: transparent;
   color: #c2711c;
+  text-shadow: 2px 2px 1px #000000;
   font-family: 'Exo 2', sans-serif;
-  font-size: 0.5rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 500;
   line-height: 3em;
   text-align: center;
   text-decoration: none;
@@ -59,8 +61,9 @@ body {
 
   &:hover {
     background-color: $col-primary;
-    color: white;
+    color: #989898;
     box-shadow: 0 0 30px 0 transparentize($col-primary, 0.5);
+    text-shadow: 0.5px 0.5px 0.5px black;
 
     @include transition(all 0.2s ease-out);
 
@@ -81,7 +84,7 @@ body {
     left: 0%;
     width: 0;
     height: 86%;
-    background: white;
+    background: transparent;
     box-shadow: 0 0 15px 3px white;
     content: '';
     opacity: 0;
