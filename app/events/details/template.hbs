@@ -8,7 +8,13 @@
     {{model.name}}
   </h2>
   <p>{{model.description}}</p>
-  <p>{{model.active}}</p>
+  {{#if model.active}}
+    {{fa-icon "times-circle"}}
+    <p>Adventurers are already seeking this treasure.</p>
+  {{else}}
+    {{fa-icon "check-circle"}}
+    <p>This treasure has not been found.</p>
+  {{/if}}
   <p>{{model.cost}}</p>
 
 
