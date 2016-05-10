@@ -8,23 +8,21 @@
 </div>
 
 <nav class="top-nav">
-
   <div class="links-container">
-    {{#link-to "index.about"}}
-    <button class="btn login-btn">About</button>
+    {{#link-to "index.about" class="links-container__link"}}
+      <button class="btn login-btn">About</button>
     {{/link-to}}
-    {{#link-to "events"}}
-    <button class="btn login-btn">Events</button>
+    {{#link-to "events" class="links-container__link"}}
+      <button class="btn login-btn">Events</button>
     {{/link-to}}
-    {{#link-to "index.register"}}
-      <button class="btn register-btn">Register</button>
+    {{#link-to "index.register" class="links-container__link"}}
+        <button class="btn register-btn">Register</button>
     {{/link-to}}
 
-    {{#link-to "index.login"}}
-    <button class="btn login-btn">Login</button>
+    {{#link-to "index.login" class="links-container__link"}}
+      <button class="btn login-btn">Login</button>
     {{/link-to}}
   </div>
-
 </nav>
 {{outlet}}
 </div>
