@@ -7,7 +7,7 @@
     <form class="registration" {{action login model on="submit"}}>
 
       <p class="form-input">
-        {{paper-input class="input-field" type="text" label="Email" value=model.email}}
+        {{paper-input class="input-field" type="email" label="Email" value=model.email customValidation=emailValidation}}
       </p>
 
       <p class="form-input">
