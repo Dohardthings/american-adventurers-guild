@@ -14,15 +14,13 @@ a {
   color: #c2711c;
   font-family: herculanum;
   text-align: center;
+
 }
 
-@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
 .btn {
-  display: inline-block;
   position: relative;
-  padding-right: 5em;
-  padding-left: 5em;
+  width: 100%;
   border: 0px solid #d4e0d7;
   border-radius: $corner-radius;
   outline: none;
@@ -36,8 +34,6 @@ a {
   text-decoration: none;
   text-shadow: 2px 2px 1px #000000;
   text-transform: uppercase;
-
-
 
   box-shadow: 0 0 0 0 transparent;
 

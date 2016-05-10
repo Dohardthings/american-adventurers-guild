@@ -22,4 +22,11 @@
   display: flex;
   justify-content: space-between;
   margin: 0 1rem;
+  flex: 1 1 auto;
+
+  &__link {
+    flex: 1;
+
+    margin: 1rem;
+  }
 }
