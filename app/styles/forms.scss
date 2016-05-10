@@ -21,9 +21,7 @@
 
 .form-input {
   flex: 1;
-  margin-right: 2rem;
-  width: 15rem;
-  max-width: 80%;
+  margin: 1rem 2rem;
 }
 
 .input-field {
@@ -43,25 +41,30 @@
 .md-char-counter {
   display: none;
 }
+
 // placeholder
 md-input-container.md-default-theme label, md-input-container.md-default-theme .md-placeholder {
   color: white;
   text-shadow: 2px 2px 2px black;
 }
+
 // label after done typing
 md-input-container.md-default-theme:not(.md-input-invalid).md-input-has-value label {
   color: $brand-orange;
   text-shadow: 2px 2px 2px black;
 }
+
 // label while typing
 md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused label {
   color: white;
   text-shadow: 2px 2px 2px black;
 }
+
 // underline while the input is active
 md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused .md-input {
   border-color: white;
 }
+
 // input text
 md-input-container.md-default-theme .md-input {
   color: $brand-orange;
