@@ -3,7 +3,7 @@
 }
 
 .content-container {
-  width: 30rem;
+  width: 45rem;
   margin: 3rem auto;
 }
 
@@ -15,12 +15,46 @@
 
 .form-input {
   flex: 1;
+  margin-right: 2rem;
+  width: 15rem;
+  max-width: 80%;
 }
 
 .input-field {
   font-size: 1.2rem;
+  text-align: left;
 }
 
 .button-container {
   margin-top: 5rem;
+  width: 100%;
+}
+
+.md-char-counter {
+  display: none;
+}
+// placeholder
+md-input-container.md-default-theme label, md-input-container.md-default-theme .md-placeholder {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+// label after done typing
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-has-value label {
+  color: #c2711c;
+  text-shadow: 2px 2px 2px black;
+}
+// label while typing
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused label {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+// underline while the input is active
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused .md-input {
+  border-color: white;
+}
+// input text
+md-input-container.md-default-theme .md-input {
+  color: #c2711c;
+  text-shadow: 2px 2px 2px black;
+  border-color: #c2711c;
 }
