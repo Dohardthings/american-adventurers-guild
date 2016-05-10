@@ -30,6 +30,10 @@
   width: 100%;
 }
 
+.btn-save {
+  width: 17rem;
+}
+
 .md-char-counter {
   display: none;
 }
@@ -40,7 +44,7 @@ md-input-container.md-default-theme label, md-input-container.md-default-theme .
 }
 // label after done typing
 md-input-container.md-default-theme:not(.md-input-invalid).md-input-has-value label {
-  color: #c2711c;
+  color: $brand-orange;
   text-shadow: 2px 2px 2px black;
 }
 // label while typing
@@ -54,7 +58,7 @@ md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused .md-
 }
 // input text
 md-input-container.md-default-theme .md-input {
-  color: #c2711c;
+  color: $brand-orange;
   text-shadow: 2px 2px 2px black;
-  border-color: #c2711c;
+  border-color: $brand-orange;
 }
