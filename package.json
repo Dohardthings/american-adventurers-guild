@@ -35,7 +35,7 @@
     "ember-cli-moment-shim": "1.1.0",
     "ember-cli-qunit": "^1.4.0",
     "ember-cli-release": "0.2.8",
-    "ember-cli-sass": "4.2.1",
+    "ember-cli-sass": "5.3.1",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-concurrency": "^0.6.1",
@@ -46,6 +46,7 @@
     "ember-load-initializers": "^0.5.1",
     "ember-moment": "6.1.0",
     "ember-network": "0.3.0",
+    "ember-paper": "0.2.14",
     "ember-promise-dialog": "0.0.0",
     "ember-resolver": "^2.0.3",
     "ember-simple-auth": "1.1.0-beta.4",
@@ -53,12 +54,10 @@
     "ember-simple-form": "1.0.1",
     "ember-truth-helpers": "^1.2.0",
     "ember-with-service": "1.1.0",
-    "ember-yoga-sass": "1.0.0",
     "eslint": "^2.8.0",
     "eslint-config-rtablada": "^1.0.1",
     "liquid-fire": "0.23.0",
     "loader.js": "^4.0.1",
-    "sass-lint": "^1.6.2",
-    "yoga-sass": "1.0.1"
+    "sass-lint": "^1.6.2"
   }
 }

@@ -7,19 +7,19 @@
     <form class="registration" {{action newUser model on="submit"}}>
 
       <p class="form-input">
-        {{input class="input-field" type="text" maxlength="25" placeholder="Email" value=model.email}}
+        {{paper-input class="input-field" type="text" maxlength="25" placeholder="Email" value=model.email}}
       </p>
 
       <p class="form-input">
-        {{input class="input-field" type="text" maxlength="16" placeholder="Username" value=model.username}}
+        {{paper-input class="input-field" type="text" maxlength="16" placeholder="Username" value=model.username}}
       </p>
 
       <p class="form-input">
-        {{input class="input-field" type="password" maxlength="16" placeholder="Password" value=model.password}}
+        {{paper-input class="input-field" type="password" maxlength="16" placeholder="Password" value=model.password}}
       </p>
 
       <p class="form-input">
-        {{input class="input-field" type="number" placeholder="Phone Number" value=model.phoneNumber}}
+        {{paper-input class="input-field" type="number" placeholder="Phone Number" value=model.phoneNumber}}
       </p>
 
       <div class="button-container">
