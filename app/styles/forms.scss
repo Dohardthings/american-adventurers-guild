@@ -1,0 +1,26 @@
+.main-container {
+  text-align: center;
+}
+
+.content-container {
+  width: 30rem;
+  margin: 3rem auto;
+}
+
+.registration {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-input {
+  flex: 1;
+}
+
+.input-field {
+  font-size: 1.2rem;
+}
+
+.button-container {
+  margin-top: 5rem;
+}
