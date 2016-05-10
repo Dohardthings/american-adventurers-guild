@@ -1,12 +1,14 @@
 
 .site-container {
-  background-image:url('http://www.publicdomainpictures.net/pictures/30000/nahled/old-background-1350553716qhs.jpg');
+  background: rgba(0,0,0,.6);
+
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
   min-height: 100vh;
   overflow: auto;
 }
+
 
 .how-list {
   color: white;
