@@ -8,6 +8,16 @@
   overflow: auto;
 }
 
+
+.link-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cool-link {
+  color: $brand-orange;
+}
+
 .title-container {
   display: flex;
   justify-content: center;
