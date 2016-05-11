@@ -18,6 +18,12 @@ Router.map(function() {
     this.route('details', { path: `/:event_id` }, function() {
       this.route('clues');
     });
+    this.route('prizes', function() {
+
+      this.route('edit', {
+        path: '/:id'
+      });
+    });
   });
 });
 
