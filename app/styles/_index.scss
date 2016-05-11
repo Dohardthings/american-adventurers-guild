@@ -26,11 +26,13 @@
 .heading-container {
   flex: 1;
   display: flex;
-  justify-content: center;
+  max-width: 64%;
+  justify-content: flex-end;
 }
 
 .username-container {
-  width: 8rem;
+  text-align: right;
+  width: 20%;
 }
 
 .show-username {
