@@ -12,9 +12,9 @@ a {
 }
 
 .site-heading {
+  margin-left: 9rem;
   color: $brand-orange;
   font-family: herculanum;
-  text-align: center;
 
 }
 
@@ -22,7 +22,7 @@ a {
 .btn {
   position: relative;
   width: 100%;
-  border: 0px solid #d4e0d7;
+  border: 0;
   border-radius: $corner-radius;
   outline: none;
   background: transparent;
