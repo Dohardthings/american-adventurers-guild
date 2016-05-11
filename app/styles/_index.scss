@@ -1,37 +1,52 @@
 
 .site-container {
-  background: rgba(0,0,0,.8);
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
   min-height: 100vh;
+  background: rgba(0,0,0,.8);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
   overflow: auto;
 }
 
+.title-container {
+  display: flex;
+  justify-content: center;
+}
 
+.heading-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.username-container {
+  width: 8rem;
+}
+
+.show-username {
+
+}
 
 .how-list {
   color: white;
-
 }
+
 .about-us {
-  font-size: 1.2rem;
   color: white;
-// background:url('http://cdn1.listovative.com/wp-content/uploads/2015/08/hidden-treasure-around-the-world.jpg')
+  font-size: 1.2rem;
 }
 
 .who-heading {
-  border: 3px solid white;
   width: 38%;
   margin: auto;
+  border: 3px solid white;
 }
 
 .links-container {
   display: flex;
+  flex: 1 1 auto;
   justify-content: space-between;
   margin: 0 1rem;
-  flex: 1 1 auto;
 
   &__link {
     flex: 1;
