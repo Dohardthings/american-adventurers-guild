@@ -15,9 +15,14 @@ Router.map(function() {
   });
   this.route('events', function() {
     this.route('new');
-    this.route('details', { path: `/:event_id` }, function() {
-      this.route('clues');
+    this.route('clues', function() {
+      this.route('new');
+
+      this.route('edit', {
+        path: '/:id'
+      });
     });
+    this.route('details', { path: `/:event_id` });
   });
 });
 

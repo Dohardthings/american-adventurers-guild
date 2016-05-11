@@ -1,0 +1,11 @@
+<h1>new clue</h1>
+
+{{#simple-form onsubmit=(action saveClue) as |formValues|}}
+  {{input placeholder="url"  value=formValues.url}}
+  {{input placeholder="description"  value=formValues.description}}
+
+  {{#link-to "events.clues" class="btn"}}Cancel{{/link-to}}
+  <button>save</button>
+{{/simple-form}}
+
+{{outlet}}

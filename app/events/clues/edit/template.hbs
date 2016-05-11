@@ -1,0 +1,9 @@
+<h1>things</h1>
+{{#simple-form startingValues=model onsubmit=(action saveClue model) as |formValues|}}
+  {{input placeholder="description"  value=formValues.description}}
+
+  {{#link-to "events.clues" class="btn"}}Cancel{{/link-to}}
+  <button>save</button>
+{{/simple-form}}
+
+{{outlet}}

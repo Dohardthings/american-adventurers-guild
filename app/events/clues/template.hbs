@@ -1,0 +1,24 @@
+<h1 class="title-container">ALL CLUES</h1>
+
+{{#link-to "events.clues.new"}}New Clue{{/link-to}}
+{{outlet}}
+
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        Id
+      </th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |clue|}}
+    <td>{{clue.id}}</td>
+    <td>{{clue.description}}</td>
+    <td>{{#link-to "events.clues.edit" clue.id}} <span class="fa fa-pencil"></span>{{/link-to}}</td>
+    <td><button class="btn"{{action delete clue}}>{{fa-icon "fa-trash" spin=true}}</button></td>
+    {{/each}}
+  </tbody>
+</table>
