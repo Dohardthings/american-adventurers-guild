@@ -14,8 +14,17 @@
   justify-content: space-around;
 }
 
+.cool-link-text {
+  border: 1px solid $brand-orange;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
 .cool-link {
   color: $brand-orange;
+  border: white 1px solid;
+  padding: 0.3rem;
 }
 
 .title-container {
