@@ -1,2 +1,40 @@
 <h1 class="title-container">All Prizes</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Img</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    {{#each model as |prize|}}
+      <tr>
+        <td>{{prize.id}}</td>
+        <td>{{prize.name}}</td>
+        <td><img src="{{prize.imgUrl}}" alt=""></td>
+        <td>{{prize.description}}</td>
+        <td>
+          {{#link-to "events.prizes.edit" prize.id}}
+          {{fa-icon "pencil"}}
+          {{/link-to}}
+        </td>
+        <td>
+          <button class="btn" {{action delete prize}}>
+            {{!-- <span class="fa fa-trash"></span> --}}
+            {{fa-icon "trash" spin=true}}
+          </button>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
 {{outlet}}
