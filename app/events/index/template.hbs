@@ -1,20 +1,57 @@
 
 <h1 class="page-title">Events</h1>
 
-<ul>
-  {{#each model as |event|}}
+{{!-- <ul>
 
-    <li>
-      <p>{{event.name}}</p>
-      <p>{{event.type}}</p>
-      <p>{{event.etc}}</p>
-      <p>{{event.prize.name}}</p>
-      <p>{{event.searchArea}}</p>
-      {{#link-to "events.details" event.id}}
-      <button class="btn btn-details">Details</button>
+    <li class="event-items">
+      <p class="event-attr">{{event.name}}</p>
+      <p class="event-attr">{{event.type}}</p>
+      <p class="event-attr">{{event.etc}}</p>
+      <p class="event-attr">{{event.prize.name}}</p>
+      <p class="event-attr">{{event.searchArea}}</p>
+      {{#link-to "events.details" event.id class="btn details-link"}}
+      Details
       {{/link-to}}
     </li>
 
-  {{/each}}
   {{outlet}}
-</ul>
+</ul> --}}
+
+<div class="table-container">
+  <table class="table">
+    <thead class="table-head">
+      <tr class="table-row">
+        <th class="table-header">Event Name</th>
+        <th class="table-header">Type</th>
+        <th class="table-header">Est. Completion Time</th>
+        <th class="table-header">Prize</th>
+        <th class="table-header">Search Area</th>
+        <th class="table-header">Available</th>
+        <th class="table-header"></th>
+      </tr>
+    </thead>
+
+    <tbody class="table-body">
+
+      {{#each model as |event|}}
+        <tr class="table-row">
+          <td class="table-item" class="table-item">{{event.name}}</td>
+          <td class="table-item">{{event.type}}</td>
+          <td class="table-item">{{event.etc}}</td>
+          <td class="table-item">{{event.prize.name}}</td>
+          <td class="table-item">{{event.searchArea}}</td>
+          <td class="table-item">
+            {{#if event.active}}
+              {{fa-icon "times-circle"}}
+            {{else}}
+              {{fa-icon "check-circle"}}
+            {{/if}}
+          </td>
+          <td class="table-item__button">
+            {{#link-to "events.details" event.id class="btn details-link"}}Details{{/link-to}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
