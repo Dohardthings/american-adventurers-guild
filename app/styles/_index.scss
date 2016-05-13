@@ -45,13 +45,15 @@ border-bottom: silver 10px solid;
 .heading-container {
   display: flex;
   flex: 1;
-  justify-content: flex-end;
+  justify-content: center;
   max-width: 64%;
 }
 
 .username-container {
-  width: 20%;
+  width: 35%;
   text-align: right;
+  margin: auto;
+  text-align: center;
 }
 
 .show-username {
@@ -76,16 +78,24 @@ border-bottom: silver 10px solid;
   list-style: none;
 }
 
+.who {
+  border: 5px solid rgba(255, 255, 255, 0.54);
+  background: rgba(42, 45, 56, 0.82);
+  box-shadow: 10px 10px 30px black;
+
+}
+
 .about-us {
   color: white;
   font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .who-heading {
   width: 38%;
   margin: auto;
-  border: 3px solid white;
-
+  margin-top: 1rem;
 }
 
 .links-container {
