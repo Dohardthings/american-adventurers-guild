@@ -3,6 +3,9 @@
 html, body {
   margin: 0;
   text-shadow: 2px 2px 1px #000000;
+  background: url('http://img.mota.ru/upload/wallpapers/2012/10/31/09/01/33186/mota_ru_2103105-1024x768.jpg') no-repeat center center fixed;
+
+  background-size: cover;
 }
 
 a {
@@ -34,7 +37,7 @@ img {
   outline: none;
   background: transparent;
   color: $brand-orange;
-  font-family: 'Exo 2', sans-serif;
+  font-family: herculanum;
   font-size: 1rem;
   font-weight: 500;
   line-height: 3em;

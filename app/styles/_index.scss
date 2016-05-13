@@ -1,18 +1,21 @@
 .top-container {
-background-image:url('http://img.mota.ru/upload/wallpapers/2012/10/31/09/01/33186/mota_ru_2103105-1024x768.jpg');
 border-bottom: silver 10px solid;
 
 }
 
 .site-container {
-  background-repeat: no-repeat;
-  background-size: cover;
   color: white;
   overflow: auto;
   background: rgba(0,0,0,0.7);
+  min-height: 100vw;
+  display: flex;
+  flex-direction: column;
 
 }
 
+.table-container {
+  flex-grow: 1;
+}
 
 .link-list {
   display: flex;
@@ -24,6 +27,7 @@ border-bottom: silver 10px solid;
   width: 50%;
   margin: auto;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .cool-link {
@@ -53,6 +57,11 @@ border-bottom: silver 10px solid;
 
 }
 
+.main-container {
+  background: grey;
+
+}
+
 .how-back {
 
 }
@@ -77,6 +86,7 @@ border-bottom: silver 10px solid;
   width: 38%;
   margin: auto;
   border: 3px solid white;
+
 }
 
 .links-container {
@@ -90,4 +100,7 @@ border-bottom: silver 10px solid;
 
     margin: 1rem;
   }
+}
+
+footer {
 }
