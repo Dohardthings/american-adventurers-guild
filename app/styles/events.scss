@@ -1,25 +1,30 @@
 .page-title {
-  color: $col-primary;
+  margin: 0;
+  padding: 5rem 0;
+  font-size: 4rem;
   text-align: center;
+}
+
+.page-title-container {
+  background: radial-gradient(rgba(0, 0, 0, 0.498039) 0%, rgba(0, 0, 0, 0) 50%);
 }
 
 .table-container {
   width: 100%;
-  background: url('http://oldtimewallpapers.com/wallpapers/201204/1334738152_medium.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-
+  background: #708090;
+  text-shadow: none;
+  color: #000000;
 }
 
 .table {
   width: 90%;
-  margin: 3rem auto;
+  margin: auto;
   padding: 3rem 0;
   text-align: center;
 }
 
 .table-header {
-  color: $brand-orange;
+  color: darken($brand-orange, 15%);
 }
 
 .table-item__button {
@@ -28,4 +33,10 @@
 
 .details-link {
   padding: 10px;
+  color: #DAA520;
+  text-shadow: none;
+
+  &:hover {
+    text-shadow: none;
+  }
 }
