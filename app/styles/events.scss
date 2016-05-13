@@ -6,12 +6,13 @@
 }
 
 .page-title-container {
-  background: radial-gradient(rgba(0, 0, 0, 0.498039) 0%, rgba(0, 0, 0, 0) 50%);
+  background: radial-gradient(rgba(90, 90, 0, 0.498039) 10%, rgba(0, 0, 0, 0) 35%);
 }
 
 .table-container {
+  flex-grow: 1;
   width: 100%;
-  background: #708090;
+  background: #FAFAD2;
   text-shadow: none;
   color: #000000;
 }
