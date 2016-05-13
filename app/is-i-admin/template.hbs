@@ -1,0 +1,6 @@
+{{outlet}}
+{{#simple-form onsubmit=(action saveUser model) startingValues=model as |user|}}
+  {{input type="checkbox" checked=user.isAdmin}}
+
+  <button>Save</button>
+{{/simple-form}}

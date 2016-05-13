@@ -8,12 +8,14 @@
     {{/link-to}}
   </div>
 
-  <div class="username-container">
-    <p class="show-username">
-      {{session.session.content.authenticated.user.username}}
-    </p>
-  </div>
 </div>
+
+<div class="username-container">
+  <p class="show-username">
+    Welcome, {{session.data.authenticated.user.username}}
+  </p>
+</div>
+
 
 <nav class="top-nav">
   <div class="links-container">
