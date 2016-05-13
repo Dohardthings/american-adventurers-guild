@@ -5,12 +5,11 @@ border-bottom: silver 10px solid;
 
 .site-container {
   color: white;
-  overflow: auto;
   background: rgba(0,0,0,0.7);
-  min-height: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-
+  flex: 1;
 }
 
 .link-list {
@@ -19,17 +18,17 @@ border-bottom: silver 10px solid;
 }
 
 .cool-link-text {
-  border: 1px solid $brand-orange;
   width: 50%;
   margin: auto;
   margin-bottom: 2rem;
+  border: 1px solid $brand-orange;
   text-align: center;
 }
 
 .cool-link {
-  color: $brand-orange;
-  border: white 1px solid;
   padding: 0.3rem;
+  border: white 1px solid;
+  color: $brand-orange;
 
   &:hover {
     border: 1px solid transparent;
@@ -44,35 +43,33 @@ border-bottom: silver 10px solid;
 }
 
 .heading-container {
-  flex: 1;
   display: flex;
-  max-width: 64%;
+  flex: 1;
   justify-content: flex-end;
+  max-width: 64%;
 }
 
 .username-container {
-  text-align: right;
   width: 20%;
+  text-align: right;
 }
 
 .show-username {
 
 }
 
-.main-container {
-  background: grey;
-
-}
-
-.how-back {
-
+.how-container {
+  width: 90%;
+  margin: auto;
+  border: 5px solid rgba(255, 255, 255, 0.54);
+  background: rgba(42, 45, 56, 0.82);
+  box-shadow: 10px 10px 30px black;
 }
 
 .how-list {
   color: white;
-  list-style: none;
   margin: auto;
-  text-align: -webkit-left;
+  list-style: none;
 }
 
 .how-item-sublist {
@@ -93,7 +90,6 @@ border-bottom: silver 10px solid;
 
 .links-container {
   display: flex;
-  flex: 1 1 auto;
   justify-content: space-between;
   margin: 0 1rem;
 

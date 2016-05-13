@@ -13,11 +13,14 @@ a {
 }
 
 .site-heading {
-  margin-left: 9rem;
   color: $brand-orange;
   font-family: herculanum;
   text-align: center;
+}
 
+.ember-view {
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
