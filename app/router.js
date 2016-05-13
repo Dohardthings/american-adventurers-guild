@@ -32,6 +32,7 @@ Router.map(function() {
       });
     });
   });
+  this.route('is-i-admin');
 });
 
 export default Router;
