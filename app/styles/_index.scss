@@ -13,10 +13,6 @@ border-bottom: silver 10px solid;
 
 }
 
-.table-container {
-  flex-grow: 1;
-}
-
 .link-list {
   display: flex;
   justify-content: space-around;
@@ -34,6 +30,12 @@ border-bottom: silver 10px solid;
   color: $brand-orange;
   border: white 1px solid;
   padding: 0.3rem;
+
+  &:hover {
+    border: 1px solid transparent;
+    background: rgba(254, 166, 75, 0.37);
+    color: white;
+  }
 }
 
 .title-container {
@@ -97,10 +99,11 @@ border-bottom: silver 10px solid;
 
   &__link {
     flex: 1;
-
+    text-align: center;
     margin: 1rem;
   }
 }
 
 footer {
+  margin: 2rem 0;
 }
