@@ -8,15 +8,14 @@
 
 .table-container {
   width: 90%;
-  margin: 5rem auto;
+  margin: 0 auto 5rem;
   border: 5px solid rgba(255, 255, 255, 0.54);
   background: rgba(42, 45, 56, 0.82);
   box-shadow: 10px 10px 30px black;
 }
 
 .table {
-  width: 75rem;
-  max-width: 90%;
+  width: 90%;
   margin: auto;
   padding: 0 0 3rem;
   text-align: center;
@@ -32,6 +31,7 @@
   border-bottom: 1px solid darken($brand-orange, 15%);
   color: darken($brand-orange, 15%);
   font-size: 1.2rem;
+  font-family: herculanum;
   line-height: 2rem;
 }
 
