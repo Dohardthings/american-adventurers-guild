@@ -1,0 +1,13 @@
+.event-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  border: 5px solid rgba(255, 255, 255, 0.54);
+  background: rgba(42, 45, 56, 0.82);
+  box-shadow: 10px 10px 30px black;
+}
+
+.prize-pic {
+  width: 30rem;
+}
