@@ -37,9 +37,20 @@ border-bottom: silver 10px solid;
   }
 }
 
+.index-title-container {
+  display: flex;
+  justify-content: center;
+
+}
+
 .title-container {
   display: flex;
   justify-content: center;
+  border: 5px solid rgba(255, 255, 255, 0.54);
+  background: rgba(42, 45, 56, 0.82);
+  box-shadow: 10px 10px 30px black;
+  width: 50%;
+  margin: auto;
 }
 
 .heading-container {
@@ -66,16 +77,19 @@ border-bottom: silver 10px solid;
   border: 5px solid rgba(255, 255, 255, 0.54);
   background: rgba(42, 45, 56, 0.82);
   box-shadow: 10px 10px 30px black;
+  margin-bottom: 2rem;
 }
 
 .how-list {
   color: white;
   margin: auto;
   list-style: none;
+  margin-right: 1rem;
 }
 
 .how-item-sublist {
   list-style: none;
+  margin-right: 1rem;
 }
 
 .who {
