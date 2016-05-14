@@ -1,42 +1,50 @@
 
 <div class="main-container">
-  <h1 class="page-title">DETAILS</h1>
-  <h2>
-    {{model.name}}
-  </h2>
-  <p>{{model.description}}</p>
-  {{#if model.active}}
-    {{fa-icon "times-circle"}}
-    <p>Adventurers are already seeking this treasure.</p>
-  {{else}}
-    {{fa-icon "check-circle"}}
-    <p>This treasure has not been found.</p>
-  {{/if}}
-  <p>{{model.cost}}</p>
+  <div class="content-container">
+
+      <div class="event-container">
+        <h2>{{model.name}}</h2>
+
+        <p>{{model.description}}</p>
+
+        <div class="prize-container">
+
+          <h3>{{model.prize.name}}</h3>
+
+          <img class="prize-pic" src="{{model.prize.imgUrl}}" alt="">
+
+          <p>{{model.prize.description}}</p>
+        </div>
+
+        {{#if model.active}}
+          <p>Adventurers are already seeking this treasure.</p>
+        {{else}}
+          <p>No adventurers currently on this quest.</p>
+        {{/if}}
+        <p>
+          Price: ${{model.cost}}
+        </p>
+      </div>
 
 
-  <h1>Treasure</h1>
-  <h3>{{model.prize.name}}</h3>
-  <h3>
-    <img src="{{model.prize.imgUrl}}" alt=""></h3>
-  <p>{{model.prize.description}}</p>
 
-  <h3>Interested</h3>
+      <div class="buy-container">
+        <h3>Interested?</h3>
 
-{{#if model.active}}
+        {{#if model.active}}
 
-<p>This event is unavailable for purchase.</p>
+        <p>This event is unavailable for purchase.</p>
 
-{{else}}
+        {{else}}
 
-  <button {{action buyThis model.id}} class="btn btn-buy">Buy</button>
+        <button {{action buyThis model.id}} class="btn btn-buy">Buy</button>
 
-{{/if}}
+        {{/if}}</div>
 
-{{#link-to "events.prizes.edit" model.prize.id}}
-{{fa-icon "pencil"}}
-{{/link-to}}
-
+      {{#link-to "events.prizes.edit" model.prize.id}}
+      {{fa-icon "pencil"}}
+      {{/link-to}}
+    </div>
 </div>
 
 {{outlet}}
@@ -44,22 +52,24 @@
 
   {{!-- USER SHOUDL NOT SEE THIS --}}
 
-  {{#simple-form onsubmit=(action savePrize model) as |formStuff|}}
+  <div class="form-container">
+    {{#simple-form onsubmit=(action savePrize model) as |formStuff|}}
 
-    <p class="form-input">
-      <label class="form-label">Prize Name</label>
-      {{input class="input-field" type="text" placeholder="Name" value=formStuff.name}}
-    </p>
+      <p class="form-input">
+        <label class="form-label">Prize Name</label>
+        {{input class="input-field" type="text" placeholder="Name" value=formStuff.name}}
+      </p>
 
-    <p class="form-input">
-      <label class="form-label">Prize Image</label>
-      {{input class="input-field" type="text" placeholder="Img" value=formStuff.imgUrl}}
-    </p>
+      <p class="form-input">
+        <label class="form-label">Prize Image</label>
+        {{input class="input-field" type="text" placeholder="Img" value=formStuff.imgUrl}}
+      </p>
 
-    <p class="form-input">
-      <label class="form-label">Prize Description</label>
-      {{textarea class="input-field" placeholder="Desc." value=formStuff.description}}
-    </p>
-    <button class="btn btn-save">Save</button>
+      <p class="form-input">
+        <label class="form-label">Prize Description</label>
+        {{textarea class="input-field" placeholder="Desc." value=formStuff.description}}
+      </p>
+      <button class="btn btn-save">Save</button>
 
-  {{/simple-form}}
+    {{/simple-form}}
+  </div>

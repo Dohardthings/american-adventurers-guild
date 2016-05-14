@@ -46,11 +46,11 @@ border-bottom: silver 10px solid;
 .title-container {
   display: flex;
   justify-content: center;
+  width: 50%;
+  margin: auto;
   border: 5px solid rgba(255, 255, 255, 0.54);
   background: rgba(42, 45, 56, 0.82);
   box-shadow: 10px 10px 30px black;
-  width: 50%;
-  margin: auto;
 }
 
 .heading-container {
