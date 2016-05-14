@@ -2,8 +2,8 @@
 
 module.exports = function(environment) {
   var ENV = {
-    // apiHost: 'https://american-adventurers-guild.herokuapp.com',
-    apiHost: 'http://localhost:3000',
+    apiHost: 'https://american-adventurers-guild.herokuapp.com',
+    // apiHost: 'http://localhost:3000',
 
     modulePrefix: 'american-adventurers-guild',
     environment: environment,
