@@ -15,13 +15,16 @@ Router.map(function() {
   });
   this.route(`events`, function() {
     this.route(`new`);
+    this.route(`edit`, {
+      path: `:id`,
+    });
     this.route(`details`, { path: `/:event_id` }, function() {
       this.route(`clues`);
     });
 
     this.route(`clues`, function() {
         this.route(`edit`, {
-          path: `:id`
+          path: `:id/edit`
         });
     });
 
@@ -33,6 +36,9 @@ Router.map(function() {
     });
   });
   this.route('is-i-admin');
+
+  // this.route(`events`, function() {
+  // });
 });
 
 export default Router;
