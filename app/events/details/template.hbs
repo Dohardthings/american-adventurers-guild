@@ -29,15 +29,13 @@
 
 
       <div class="buy-container">
-        <h3>Interested?</h3>
-
         {{#if model.active}}
 
         <p>This event is unavailable for purchase.</p>
 
         {{else}}
 
-        <button {{action buyThis model.id}} class="btn btn-save">Buy</button>
+        <button {{action buyThis model.id}} class="btn btn-save">Purchase</button>
 
         {{/if}}</div>
 
