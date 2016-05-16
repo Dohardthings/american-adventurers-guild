@@ -2,6 +2,8 @@
 <div class="main-container">
   <div class="content-container">
 
+    {{outlet}}
+
       <div class="event-container">
         <h2>{{model.name}}</h2>
 
@@ -37,38 +39,7 @@
         {{else}}
 
         <button {{action buyThis model.id}} class="btn btn-save">Purchase</button>
-
-        {{/if}}</div>
-
-      {{#link-to "events.prizes.edit" model.prize.id}}
-      {{fa-icon "pencil"}}
-      {{/link-to}}
+        {{/if}}
+      </div>
     </div>
 </div>
-
-{{outlet}}
-
-
-  {{!-- USER SHOUDL NOT SEE THIS --}}
-
-  <div class="form-container">
-    {{#simple-form onsubmit=(action savePrize model) as |formStuff|}}
-
-      <p class="form-input">
-        <label class="form-label">Prize Name</label>
-        {{input class="input-field" type="text" placeholder="Name" value=formStuff.name}}
-      </p>
-
-      <p class="form-input">
-        <label class="form-label">Prize Image</label>
-        {{input class="input-field" type="text" placeholder="Img" value=formStuff.imgUrl}}
-      </p>
-
-      <p class="form-input">
-        <label class="form-label">Prize Description</label>
-        {{textarea class="input-field" placeholder="Desc." value=formStuff.description}}
-      </p>
-      <button class="btn btn-save">Save</button>
-
-    {{/simple-form}}
-  </div>
