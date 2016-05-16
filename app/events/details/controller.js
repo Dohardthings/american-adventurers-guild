@@ -11,8 +11,9 @@ export default Ember.Controller.extend({
   buyThis() {
     if (window.confirm(`Are you sure you want to purchase this?`)) {
       this.model.toggleProperty(`active`);
-
-      this.transitionToRoute(`events.details.clues`, this.model);
+      this.model.save().then(() => {
+        this.transitionToRoute(`events.details.clues`, this.model);
+      });
     }
   },
 });

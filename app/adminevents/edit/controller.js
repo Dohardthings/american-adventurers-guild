@@ -5,12 +5,14 @@ export default Ember.Controller.extend({
     event.setProperties(formValues);
 
     event.save().then(() => {
-      this.transitionToRoute(`events`);
+      this.transitionToRoute(`adminevents`);
     });
   },
 
   toggle() {
     this.model.toggleProperty(`active`);
-    this.transitionToRoute(`events`);
-  }
+    this.model.save().then(() => {
+      this.transitionToRoute(`adminevents`);
+    });
+  },
 });
