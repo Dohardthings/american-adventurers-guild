@@ -1,0 +1,46 @@
+
+
+<div class="main-container">
+  <div class="table-container">
+    <div class="page-title-container">
+      <h1 class="page-title">Events</h1>
+    </div>
+    <table class="table">
+      <thead class="table-head">
+        <tr class="table-row">
+          <th class="table-header">Event Name</th>
+          <th class="table-header">Type</th>
+          <th class="table-header">Est. Completion Time</th>
+          <th class="table-header">Prize</th>
+          <th class="table-header">Search Area</th>
+          <th class="table-header">Available</th>
+          <th class="table-header"></th>
+        </tr>
+      </thead>
+
+      <tbody class="table-body">
+
+        {{#each model as |event|}}
+          <tr class="table-row">
+            <td class="table-item" class="table-item">{{event.name}}
+            {{#link-to "events.edit" event.id}}Edit{{/link-to}}</td>
+            <td class="table-item">{{event.type}}</td>
+            <td class="table-item">{{event.etc}}</td>
+            <td class="table-item"><img src="{{event.prize.imgUrl}}" alt=""></td>
+            <td class="table-item">{{event.searchArea}}</td>
+            <td class="table-item">
+              {{#if event.active}}
+                {{fa-icon "times-circle"}}
+              {{else}}
+                {{fa-icon "check-circle"}}
+              {{/if}}
+            </td>
+            <td class="table-item__button">
+              {{#link-to "adminevents.details" event.id class="btn details-link"}}Details{{/link-to}}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

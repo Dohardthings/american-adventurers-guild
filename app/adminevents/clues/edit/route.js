@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return this.modelFor(`events.details`);
+  model({ id }) {
+    return this.store.findRecord(`clue`, id);
   },
 });

@@ -1,0 +1,74 @@
+
+<div class="main-container">
+  <div class="content-container">
+
+      <div class="event-container">
+        <h2>{{model.name}}</h2>
+
+        <p>{{model.description}}</p>
+
+        <div class="prize-container">
+
+          <h3>{{model.prize.name}}</h3>
+
+          <img class="prize-pic" src="{{model.prize.imgUrl}}" alt="">
+
+          <p>{{model.prize.description}}</p>
+        </div>
+
+        {{#if model.active}}
+          <p>Adventurers are already seeking this treasure.</p>
+        {{else}}
+          <p>No adventurers currently on this quest.</p>
+        {{/if}}
+        <p>
+          Price: ${{model.cost}}
+        </p>
+      </div>
+
+
+
+      <div class="buy-container">
+
+        {{#if model.active}}
+
+        <p>This event is unavailable for purchase.</p>
+
+        {{else}}
+
+        <button {{action buyThis model.id}} class="btn btn-save">Purchase</button>
+
+        {{/if}}</div>
+
+      {{#link-to "adminevents.prizes.edit" model.prize.id}}
+      {{fa-icon "pencil"}}
+      {{/link-to}}
+    </div>
+</div>
+
+{{outlet}}
+
+
+  {{!-- USER SHOUDL NOT SEE THIS --}}
+
+  <div class="form-container">
+    {{#simple-form onsubmit=(action savePrize model) as |formStuff|}}
+
+      <p class="form-input">
+        <label class="form-label">Prize Name</label>
+        {{input class="input-field" type="text" placeholder="Name" value=formStuff.name}}
+      </p>
+
+      <p class="form-input">
+        <label class="form-label">Prize Image</label>
+        {{input class="input-field" type="text" placeholder="Img" value=formStuff.imgUrl}}
+      </p>
+
+      <p class="form-input">
+        <label class="form-label">Prize Description</label>
+        {{textarea class="input-field" placeholder="Desc." value=formStuff.description}}
+      </p>
+      <button class="btn btn-save">Save</button>
+
+    {{/simple-form}}
+  </div>
