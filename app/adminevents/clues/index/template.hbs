@@ -1,0 +1,36 @@
+<h1 class="title-container">All Clues</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Event Name</th>
+      <th>Clue Id</th>
+      <th>Clue Description</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    {{#each model as |clue|}}
+      <tr>
+        <td>{{clue.event.name}}</td>
+        <td>{{clue.id}}</td>
+        <td>{{clue.description}}</td>
+        <td>
+          {{#link-to "adminevents.clues.edit" clue.id}}
+          {{fa-icon "pencil"}}
+          {{/link-to}}
+        </td>
+        <td>
+          <button class="btn" {{action delete clue}}>
+            {{!-- <span class="fa fa-trash"></span> --}}
+            {{fa-icon "trash" spin=true}}
+          </button>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
