@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
     clue.setProperties(formValues);
 
     clue.save().then(() => {
-      this.transitionToRoute(`events.clues.index`);
+      this.transitionToRoute(`adminevents.clues.index`);
     });
   },
 });
