@@ -1,17 +1,21 @@
-<h1>CLUES</h1>
+<div class="clues-container">
+  <div class="clues-container__title">
+    <h1 class="clues-title">CLUES</h1>
+  </div>
 
 
-<ul>
-  {{#each model.clues as |clue|}}
-  <li>
-    <p>{{clue.description}}</p>
-    {{#link-to "events.clues.edit" clue.id}}
-    {{fa-icon "pencil"}}
-    {{/link-to}}
-  </li>
-  {{/each }}
 
-</ul>
+    {{#each model.clues as |clue|}}
+
+      <p class="clue-desc">{{clue.description}}</p>
+
+      {{#link-to "adminevents.clues.edit" clue.id}}
+        {{fa-icon "pencil"}}
+      {{/link-to}}
+
+    {{/each }}</div>
+
+
 
 <h2>Add A Clue</h2>
 {{#simple-form class="new-event__form" onsubmit=(action saveClue model) as |clue|}}

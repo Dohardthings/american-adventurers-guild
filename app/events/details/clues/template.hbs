@@ -1,7 +1,12 @@
-<h1>CLUES</h1>
+<div class="clues-container">
 
-  {{#each model.clues as |clue|}}
+  <div class="clues-container__title">
+    <h1 class="clues-title">CLUES</h1>
+  </div>
 
-    <p>{{clue.description}}</p>
+    {{#each model.clues as |clue|}}
 
-  {{/each }}
+      <p class="clue-desc">{{clue.description}}</p>
+
+    {{/each }}
+  </div>

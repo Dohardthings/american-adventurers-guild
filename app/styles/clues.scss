@@ -1,0 +1,17 @@
+.clues-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  border: 5px solid rgb(134, 133, 133);
+  background: rgba(0, 0, 0, 0.9);
+  font-family: herculanum;
+
+  &__title {
+    color: #FF8200;
+    font-size: 3rem;
+  }
+}
+
+.clue-desc {
+  font-size: 2rem;
+}
