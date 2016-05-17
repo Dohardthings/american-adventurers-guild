@@ -1,0 +1,7 @@
+<h1>Purchases</h1>
+<ul>
+{{#each model as |purchase|}}
+<li>{{purchase.date}}   {{purchase.inProgress}}  {{purchase.endUser.email}}</li>
+{{/each}}
+</ul>
+{{outlet}}

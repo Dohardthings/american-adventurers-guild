@@ -49,6 +49,10 @@ Router.map(function() {
 
   // this.route(`events`, function() {
   // });
+
+  this.route('adminevents', function() {
+    this.route('purchases');
+  });
 });
 
 export default Router;
