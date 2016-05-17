@@ -16,4 +16,34 @@ export default function() {
       use: [`toRight`, { duration }]
     })
   );
+
+  // Add liquid-outlet to index.hbs for swipe like transitions
+  //
+  // this.transition(
+  //   this.fromRoute(`index.register`),
+  //   this.toRoute(`index.login`),
+  //   this.use(`toLeft`),
+  //   this.reverse(`toRight`)
+  // );
+  // this.transition(
+  //   this.fromRoute(`index.about`),
+  //   this.toRoute(`index.register`),
+  //   this.use(`toLeft`),
+  //   this.reverse(`toRight`)
+  // );
+  // this.transition(
+  //   this.fromRoute(`index.about`),
+  //   this.toRoute(`index.login`),
+  //   this.use(`toLeft`),
+  //   this.reverse(`toRight`)
+  // );
+  //
+  //
+  // Does NOT work
+  // this.transition(
+  //   this.fromRoute(`index`),
+  //   this.toRoute(`events`),
+  //   this.use(`toLeft`),
+  //   this.reverse(`toRight`)
+  // );
 }
