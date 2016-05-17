@@ -7,6 +7,7 @@
     <table class="table">
       <thead class="table-head">
         <tr class="table-row">
+          <th class="table-header">Event</th>
           <th class="table-header">Purchase Date</th>
           <th class="table-header">In Progress</th>
           <th class="table-header">User Email</th>
@@ -19,6 +20,7 @@
 
         {{#each model as |purchase|}}
           <tr class="table-row">
+            <td class="table-item">{{purchase.event.name}}</td>
             <td class="table-item">{{purchase.date}}</td>
             <td class="table-item">
               {{#if purchase.inProgress}}
@@ -30,7 +32,7 @@
             <td class="table-item">{{purchase.endUser.email}}</td>
             <td class="table-item">
               {{!-- Button to toggle event availability --}}
-              <button {{action toggleAvail model}}>Toggle Available</button>
+              <button {{action toggleAvail purchase}}>Toggle Completed</button>
             </td>
           </tr>
         {{/each}}
