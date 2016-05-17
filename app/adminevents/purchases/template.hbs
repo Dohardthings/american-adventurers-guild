@@ -1,7 +1,37 @@
-<h1>Purchases</h1>
-<ul>
-{{#each model as |purchase|}}
-<li>{{purchase.date}}   {{purchase.inProgress}}  {{purchase.endUser.email}}</li>
-{{/each}}
-</ul>
-{{outlet}}
+
+<div class="main-container">
+  <div class="table-container">
+    <div class="page-title-container">
+      <h1 class="page-title">Purchases</h1>
+    </div>
+    <table class="table">
+      <thead class="table-head">
+        <tr class="table-row">
+          <th class="table-header">Purchase Date</th>
+          <th class="table-header">In Progress</th>
+          <th class="table-header">User Email</th>
+          <th class="table-header"></th>
+
+        </tr>
+      </thead>
+
+      <tbody class="table-body">
+
+        {{#each model as |purchase|}}
+          <tr class="table-row">
+            <td class="table-item">{{purchase.date}}</td>
+            <td class="table-item">
+              {{#if purchase.inProgress}}
+                <p class="available">Yes</p>
+              {{else}}
+                <p class="not-available">No</p>
+              {{/if}}
+            </td>
+            <td class="table-item">{{purchase.endUser.email}}</td>
+            <td class="table-item"></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
