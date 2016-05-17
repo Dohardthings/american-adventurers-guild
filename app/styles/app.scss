@@ -18,3 +18,73 @@
 .fa-check-circle {
   color: green;
 }
+
+
+@media screen and (max-width: 800px) {
+.links-container {
+  flex-direction: column;
+  margin: auto;
+}
+
+table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+  thead tr {
+  		position: absolute;
+  		top: -9999px;
+  		left: -9999px;
+  	}
+
+    tr { border: 1px solid #ccc; }
+
+    	td {
+    		/* Behave  like a "row" */
+    		border: none;
+    		border-bottom: 1px solid #eee;
+    		position: relative;
+    		padding-left: 50%;
+        display: flex;
+        margin-left: 1rem;
+        max-height: 4rem;
+    	}
+
+    	td:before {
+    		/* Now like a table header */
+    		// position: absolute;
+    		/* Top/left values mimic padding */
+    		// top: 6px;
+    		// left: 6px;
+    		width: 45%;
+    		padding-right: 10px;
+    		white-space: nowrap;
+        color: $brand-orange;
+        display: flex;
+    	}
+
+      td:nth-of-type(1):before { content: "EVENT NAME"; }
+      	td:nth-of-type(2):before { content: "TYPE"; }
+      	td:nth-of-type(3):before { content: "E.C.T."; }
+      	td:nth-of-type(4):before { content: "PRIZE"; }
+      	td:nth-of-type(5):before { content: "SEARCH AREA"; }
+      	td:nth-of-type(6):before { content: "AVAILABLE"; }
+
+        .prize-image {
+          max-height: 5rem;
+        }
+// .table {
+//   margin: auto;
+//   display: flex;
+//
+// }
+//
+// .table-header {
+//   display: flex;
+//   flex-direction: column;
+// }
+//
+// .table-row {
+//   display: flex;
+//   flex-direction: column;
+// }
+}
