@@ -21,11 +21,11 @@
       <tbody class="table-body">
 
         {{#each model as |event|}}
-          <tr class="table-row">
+          <tr class="table-row liquid-container">
             <td class="table-item" class="table-item">{{event.name}}</td>
             <td class="table-item">{{event.type}}</td>
             <td class="table-item">{{event.etc}}</td>
-            <td class="table-item"><img src="{{event.prize.imgUrl}}" alt=""></td>
+            <td class="table-item"><img data-lf="prize-image:{{event.id}}" src="{{event.prize.imgUrl}}" alt=""></td>
             <td class="table-item">{{event.searchArea}}</td>
             <td class="table-item">
               {{#if event.active}}
@@ -43,3 +43,4 @@
     </table>
   </div>
 </div>
+{{liquid-outlet class="foo"}}
