@@ -2,7 +2,6 @@
 <div class="main-container">
   <div class="content-container">
 
-    {{liquid-outlet class="bar"}}
 
       <div class="event-container liquid-container">
         <h2>{{model.name}}</h2>
@@ -19,24 +18,25 @@
         </div>
 
         {{#if model.available}}
-          <p>No adventurers currently on this quest.</p>
+          <p class="available">No adventurers currently on this quest.</p>
         {{else}}
-          <p>Adventurers are already seeking this treasure.</p>
+          <p class="not-available">Adventurers are already seeking this treasure.</p>
         {{/if}}
         <p>
           Price: ${{model.cost}}
         </p>
-      </div>
+        <div class="buy-container">
 
-
-
-      <div class="buy-container">
-
-        {{#if model.available}}
+          {{#if model.available}}
           <button {{action buyThis model.id}} class="btn btn-save">Purchase</button>
-        {{else}}
+          {{else}}
           <p class="not-available">This event is unavailable for purchase.</p>
-        {{/if}}
+          {{/if}}
+        </div>
       </div>
+
+      {{!-- vv--Clues--vv --}}
+      {{liquid-outlet}}
+
     </div>
 </div>
