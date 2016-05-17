@@ -22,6 +22,11 @@
   border-spacing: 0;
 }
 
+.table-row {
+  text-shadow: none;
+  text-transform: uppercase;
+}
+
 .table-item {
   border-bottom: 1px solid #f9f9f9;
   padding: 1.5rem 0;
@@ -30,8 +35,8 @@
 .table-header {
   border-bottom: 1px solid darken($brand-orange, 15%);
   color: darken($brand-orange, 15%);
-  font-size: 1.2rem;
   font-family: herculanum;
+  font-size: 1.3rem;
   line-height: 2rem;
 }
 
