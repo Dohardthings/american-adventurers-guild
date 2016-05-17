@@ -16,10 +16,10 @@
           <p>{{model.prize.description}}</p>
         </div>
 
-        {{#if model.active}}
-          <p>Adventurers are already seeking this treasure.</p>
-        {{else}}
+        {{#if model.available}}
           <p>No adventurers currently on this quest.</p>
+        {{else}}
+          <p>Adventurers are already seeking this treasure.</p>
         {{/if}}
         <p>
           Price: ${{model.cost}}
@@ -30,15 +30,12 @@
 
       <div class="buy-container">
 
-        {{#if model.active}}
-
-        <p>This event is unavailable for purchase.</p>
-
+        {{#if model.available}}
+          <button {{action buyThis model.id}} class="btn btn-save">Purchase</button>
         {{else}}
-
-        <button {{action buyThis model.id}} class="btn btn-save">Purchase</button>
-
-        {{/if}}</div>
+          <p>This event is unavailable for purchase.</p>
+        {{/if}}
+      </div>
 
       {{#link-to "adminevents.prizes.edit" model.prize.id}}
       {{fa-icon "pencil"}}

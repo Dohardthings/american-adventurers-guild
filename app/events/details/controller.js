@@ -10,8 +10,9 @@ export default Ember.Controller.extend({
 
   buyThis() {
     if (window.confirm(`Are you sure you want to purchase this?`)) {
-      this.model.toggleProperty(`active`);
-      this.model.save().then(() => {
+      const purchase = this.store.createRecord(`purchase`, { event: this.model });
+
+      purchase.save().then(() => {
         this.transitionToRoute(`events.details.clues`, this.model);
       });
     }

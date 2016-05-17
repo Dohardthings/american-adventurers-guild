@@ -40,7 +40,7 @@ Router.map(function() {
     this.route(`prizes`, function() {
 
       this.route(`edit`, {
-        path: `/:id`
+        path: `/:id`,
       });
     });
   });

@@ -8,6 +8,7 @@ export default Model.extend({
   username: attr('string'),
   phoneNumber: attr('number'),
   admin: attr('boolean'),
+  purchase: hasMany('purchase'),
 
   isAdmin: Ember.computed({
     get() {
