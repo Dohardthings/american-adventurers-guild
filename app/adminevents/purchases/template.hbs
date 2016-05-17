@@ -28,7 +28,10 @@
               {{/if}}
             </td>
             <td class="table-item">{{purchase.endUser.email}}</td>
-            <td class="table-item"></td>
+            <td class="table-item">
+              {{!-- Button to toggle event availability --}}
+              <button {{action toggleAvail}}>Toggle Available</button>
+            </td>
           </tr>
         {{/each}}
       </tbody>

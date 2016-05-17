@@ -27,6 +27,7 @@ Router.map(function() {
     this.route(`edit`, {
       path: `:id`,
     });
+    this.route('purchases');
     this.route(`details`, { path: `/:event_id` }, function() {
       this.route(`clues`);
     });
@@ -47,12 +48,6 @@ Router.map(function() {
 
   this.route('is-i-admin');
 
-  // this.route(`events`, function() {
-  // });
-
-  this.route('adminevents', function() {
-    this.route('purchases');
-  });
 });
 
 export default Router;

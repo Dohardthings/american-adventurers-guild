@@ -23,7 +23,8 @@
         {{#each model as |event|}}
           <tr class="table-row">
             <td class="table-item" class="table-item">{{event.name}}
-            {{#link-to "adminevents.edit" event.id}}Edit{{/link-to}}</td>
+            {{#link-to "adminevents.edit" event.id}}Edit{{/link-to}}
+          </td>
             <td class="table-item">{{event.type}}</td>
             <td class="table-item">{{event.etc}}</td>
             <td class="table-item"><img src="{{event.prize.imgUrl}}" alt=""></td>
