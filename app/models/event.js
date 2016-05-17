@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import Model from 'ember-data/model';
 import attr from 'ember-data/attr';
 import { belongsTo, hasMany } from 'ember-data/relationships';
@@ -7,9 +8,17 @@ export default Model.extend({
   type: attr(),
   cost: attr(`number`),
   etc: attr(),
-  active: attr(`boolean`, { defaultValue: false }),
+
+  available: Ember.computed('purchases.@each.inProgress', function() {
+    // Look through all purchases... If any are inProgress return true
+    return this.get(`purchases`).reduce((available, purchase) => {
+      return available && !purchase.get('inProgress');
+    }, true);
+  }),
+
   description: attr(),
   searchArea: attr(),
   prize: belongsTo(`prize`),
   clues: hasMany(`clue`),
+  purchases: hasMany(`purchase`),
 });

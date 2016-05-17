@@ -28,10 +28,10 @@
             <td class="table-item"><img src="{{event.prize.imgUrl}}" alt=""></td>
             <td class="table-item">{{event.searchArea}}</td>
             <td class="table-item">
-              {{#if event.active}}
-                {{fa-icon "times-circle"}}
-              {{else}}
+              {{#if event.available}}
                 {{fa-icon "check-circle"}}
+              {{else}}
+                {{fa-icon "times-circle"}}
               {{/if}}
             </td>
             <td class="table-item__button">
