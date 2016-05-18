@@ -25,7 +25,7 @@ Router.map(function() {
   this.route(`adminevents`, function() {
     this.route(`new`);
     this.route(`edit`, {
-      path: `:id`,
+      path: `edit/:id`,
     });
     this.route('purchases');
     this.route(`details`, { path: `/:event_id` }, function() {

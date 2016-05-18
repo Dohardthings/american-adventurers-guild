@@ -3,15 +3,15 @@
     <div class="event-container">
       <h1 class="event-title">Edit Prize</h1>
 
-{{#simple-form class="registration" startingValues=model onsubmit=(action savePrize model) as |formValues|}}
-  <p class="edit">{{profile-upload
-    class="upload"
-    fileUrl=formValues.imgUrl
-    placeholderUrl="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRFOUW21bzJrbK94GhQ0pLSKQTKs87Q9-Ba1K4QLMy2KXfqPam6"
-    onchange=(action (mut formValues.imgUrl))}}</p>
-  {{!-- {{paper-input label="url" value=formValues.imgUrl}} --}}
-  <p class="edit">{{paper-input label="Name" value=formValues.name}}</p>
-  <p class="edit">{{paper-input label="Description" value=formValues.description}}</p>
+        {{#simple-form class="registration" startingValues=model onsubmit=(action savePrize model) as |formValues|}}
+          <p class="edit">{{profile-upload
+            class="upload"
+            fileUrl=formValues.imgUrl
+            placeholderUrl="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRFOUW21bzJrbK94GhQ0pLSKQTKs87Q9-Ba1K4QLMy2KXfqPam6"
+            onchange=(action (mut formValues.imgUrl))}}</p>
+          {{!-- {{paper-input label="url" value=formValues.imgUrl}} --}}
+          <p class="edit">{{paper-input label="Name" value=formValues.name}}</p>
+          <p class="edit">{{paper-input label="Description" value=formValues.description}}</p>
 
           {{#link-to "adminevents.prizes.index" class="btn btn-save-edit"}}Cancel{{/link-to}}
 
@@ -20,4 +20,3 @@
       </div>
     </div>
   </div>
-</div>
