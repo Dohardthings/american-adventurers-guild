@@ -8,11 +8,3 @@ export default Ember.Controller.extend({
       this.transitionToRoute(`adminevents`);
     });
   },
-
-  toggle() {
-    this.model.toggleProperty(`active`);
-    this.model.save().then(() => {
-      this.transitionToRoute(`adminevents`);
-    });
-  },
-});
