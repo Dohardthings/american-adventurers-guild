@@ -1,36 +1,41 @@
-<h1 class="title-container">All Clues</h1>
 
+<div class="main-container">
+  <div class="table-container">
+    <div class="page-title-container">
+      <h1 class="page-title">All Clues</h1>
+    </div>
+    <table class="table">
+      <thead class="table-head">
+        <tr class="table-row">
+          <th class="table-header">Event Name</th>
+          <th class="table-header">Clue Id</th>
+          <th class="table-header">Clue Description</th>
+          <th class="table-header"></th>
+          <th class="table-header"></th>
+        </tr>
+      </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Event Name</th>
-      <th>Clue Id</th>
-      <th>Clue Description</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+      <tbody class="table-body">
 
-  <tbody>
-
-    {{#each model as |clue|}}
-      <tr>
-        <td>{{clue.event.name}}</td>
-        <td>{{clue.id}}</td>
-        <td>{{clue.description}}</td>
-        <td>
-          {{#link-to "adminevents.clues.edit" clue.id}}
-          {{fa-icon "pencil"}}
-          {{/link-to}}
-        </td>
-        <td>
-          <button class="btn" {{action delete clue}}>
-            {{!-- <span class="fa fa-trash"></span> --}}
-            {{fa-icon "trash" spin=true}}
-          </button>
-        </td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+        {{#each model as |clue|}}
+          <tr class="table-row">
+            <td class="table-item">{{clue.event.name}}</td>
+            <td class="table-item">{{clue.id}}</td>
+            <td class="table-item">{{clue.description}}</td>
+            <td class="table-item">
+              {{#link-to "adminevents.clues.edit" clue.id}}
+              {{fa-icon "pencil"}}
+              {{/link-to}}
+            </td>
+            <td class="table-item">
+              <button class="btn" {{action delete clue}}>
+                {{!-- <span class="fa fa-trash"></span> --}}
+                {{fa-icon "trash" spin=true}}
+              </button>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    </div>
+</div>

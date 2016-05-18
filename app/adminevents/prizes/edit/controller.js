@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
     prize.setProperties(formValues);
 
     prize.save().then(() => {
-      this.transitionToRoute(`events.prizes.index`);
+      this.transitionToRoute(`adminevents.prizes.index`);
     });
   },
 });
