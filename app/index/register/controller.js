@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  session: Ember.inject.service(),
 
   emailValidation: {
     errorMessage: `Please provide email in a valid format`,
@@ -15,7 +16,7 @@ export default Ember.Controller.extend({
     const member = this.store.createRecord(`endUser`, attrs);
 
     member.save().then(() => {
-      this.transitionToRoute(`index`);
+      return this.get(`session`).authenticate(`authenticator:application`, attrs.email, attrs.password);
     })
     .catch((reason) => {
       console.log(reason);

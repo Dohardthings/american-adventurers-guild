@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
     const event = this.store.createRecord(`event`, attr);
 
     event.save().then(() => {
-      this.transitionToRoute(`events`);
+      this.transitionToRoute(`adminevents`);
     });
   },
 });
