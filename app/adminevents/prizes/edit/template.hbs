@@ -1,7 +1,12 @@
 <h1 class="title-container">Edit Prize</h1>
 
 {{#simple-form class="registration" startingValues=model onsubmit=(action savePrize model) as |formValues|}}
-  {{paper-input label="url" value=formValues.imgUrl}}
+  {{profile-upload
+    class="upload"
+    fileUrl=formValues.imgUrl
+    placeholderUrl="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRFOUW21bzJrbK94GhQ0pLSKQTKs87Q9-Ba1K4QLMy2KXfqPam6"
+    onchange=(action (mut formValues.imgUrl))}}
+  {{!-- {{paper-input label="url" value=formValues.imgUrl}} --}}
   {{paper-input label="Name" value=formValues.name}}
   {{paper-input label="Description" value=formValues.description}}
 

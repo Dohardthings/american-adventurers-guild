@@ -4,6 +4,7 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+    origin: `https://american-adventurers.surge.sh/`,
     babel: {
       includePolyfill: true,
     },
