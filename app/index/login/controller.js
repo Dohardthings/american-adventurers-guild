@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
   login({ email, password }) {
     this.get(`session`).authenticate(`authenticator:application`, email, password)
       .then(() => {
-        this.transitionToRoute(`events`);
+        this.transitionToRoute(`index.events`);
       })
       .catch((reason) => {
         console.log(reason);
