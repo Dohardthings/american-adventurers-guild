@@ -12,15 +12,13 @@ Router.map(function() {
     this.route(`about`);
     this.route(`register`);
     this.route(`login`);
-  });
-  this.route(`events`, function() {
-    this.route(`details`, { path: `/:event_id` }, function() {
-      this.route(`clues`);
+
+    this.route(`events`, function() {
+      this.route(`details`, { path: `/:event_id` }, function() {
+        this.route(`clues`);
+      });
     });
-
-
   });
-
 
   this.route(`adminevents`, function() {
     this.route(`new`);
