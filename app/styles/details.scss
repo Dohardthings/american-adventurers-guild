@@ -8,9 +8,22 @@
   box-shadow: 10px 10px 30px black;
 }
 
+.event-title {
+  font-family: herculanum;
+  font-size: 5rem;
+  margin: 0;
+  padding: 3rem 0 2rem;
+}
+
 .prize-container {
   width: 95%;
   margin: auto;
+}
+
+.prize-name {
+  color: #fb8001;
+  font-family: herculanum;
+  font-size: 1.3rem;
 }
 
 .prize-pic {
