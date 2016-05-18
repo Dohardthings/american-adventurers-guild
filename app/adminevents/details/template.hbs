@@ -56,10 +56,15 @@
         {{input class="input-field" type="text" placeholder="Name" value=formStuff.name}}
       </p>
 
-      <p class="form-input">
+      {{!-- <p class="form-input">
         <label class="form-label">Prize Image</label>
-        {{input class="input-field" type="text" placeholder="Img" value=formStuff.imgUrl}}
-      </p>
+        {{!-- {{input class="input-field" type="text" placeholder="Img" value=formStuff.imgUrl}} --}}
+        {{!-- {{profile-upload
+          class="upload"
+          fileUrl=formValues.imgUrl
+          placeholderUrl="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRFOUW21bzJrbK94GhQ0pLSKQTKs87Q9-Ba1K4QLMy2KXfqPam6"
+          onchange=(action (mut formValues.imgUrl))}}
+      </p> --}}
 
       <p class="form-input">
         <label class="form-label">Prize Description</label>
