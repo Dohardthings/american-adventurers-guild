@@ -13,7 +13,9 @@
 <div class="username-container">
   <p class="show-username">
     Welcome, {{session.data.authenticated.user.username}}
+    {{#link-to "logout" class="logout"}}Logout{{/link-to}}
   </p>
+
 </div>
 
 
