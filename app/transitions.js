@@ -1,8 +1,8 @@
 export default function() {
   const duration = 500;
   this.transition(
-    this.fromRoute(`events.index`),
-    this.toRoute(`events.details`),
+    this.fromRoute(`index.events.index`),
+    this.toRoute(`index.events.details`),
     this.use(`explode`, {
       matchBy: `data-lf`,
       use: [`flyTo`, { duration }]
@@ -20,27 +20,18 @@ export default function() {
   // Add liquid-outlet to index.hbs for swipe like transitions
 
   this.transition(
-    this.fromRoute(`index.register`),
-    this.toRoute(`index.login`),
+    this.fromRoute(`index.about`),
     this.use(`toLeft`),
     this.reverse(`toRight`)
   );
   this.transition(
-    this.fromRoute(`index.about`),
+    this.fromRoute(`index.login`),
+    this.use(`toRight`),
+    this.reverse(`toLeft`)
+  );
+  this.transition(
+    this.fromRoute(`index.events`),
     this.toRoute(`index.register`),
-    this.use(`toLeft`),
-    this.reverse(`toRight`)
-  );
-  this.transition(
-    this.fromRoute(`index.about`),
-    this.toRoute(`index.login`),
-    this.use(`toLeft`),
-    this.reverse(`toRight`)
-  );
-
-  this.transition(
-    this.fromRoute(`events`),
-    this.toRoute(`index`),
     this.use(`toLeft`),
     this.reverse(`toRight`)
   );

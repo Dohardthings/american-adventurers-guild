@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
       const purchase = this.store.createRecord(`purchase`, { event: this.model });
 
       purchase.save().then(() => {
-        this.transitionToRoute(`events.details.clues`, this.model);
+        this.transitionToRoute(`index.events.details.clues`, this.model);
       });
     }
   },
