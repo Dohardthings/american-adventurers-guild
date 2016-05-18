@@ -1,10 +1,17 @@
-<h1 class="title-container">Edit Clue</h1>
+<div class="main-container">
+  <div class="content-container">
+    <div class="event-container">
+      <h1 class="event-title">Edit Clue</h1>
 
-{{#simple-form class="registration" startingValues=model onsubmit=(action saveClue model) as |formValues|}}
+      <div class="prize-container">
+        {{#simple-form class="registration" startingValues=model onsubmit=(action saveClue model) as |formValues|}}
 
-  {{paper-input label="Description" value=formValues.description}}
+<p class="edit">{{paper-input label="Description" value=formValues.description}}</p>
+          {{#link-to "adminevents.clues.index" class="btn btn-save-edit"}}Cancel{{/link-to}}
 
-  {{#link-to "adminevents.clues.index" class="btn"}}Cancel{{/link-to}}
-
-  <button class="btn btn-save">Save</button>
-{{/simple-form}}
+          <button class="btn btn-save-edit">Save</button>
+        {{/simple-form}}
+      </div>
+    </div>
+  </div>
+</div>

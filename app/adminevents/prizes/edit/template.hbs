@@ -1,11 +1,19 @@
-<h1 class="title-container">Edit Prize</h1>
+<div class="main-container">
+  <div class="content-container">
+    <div class="event-container">
+      <h1 class="event-title">Edit Prize</h1>
 
-{{#simple-form class="registration" startingValues=model onsubmit=(action savePrize model) as |formValues|}}
-  {{paper-input label="url" value=formValues.imgUrl}}
-  {{paper-input label="Name" value=formValues.name}}
-  {{paper-input label="Description" value=formValues.description}}
+      <div class="prize-container">
+        {{#simple-form class="registration" startingValues=model onsubmit=(action savePrize model) as |formValues|}}
+          <p class="edit">{{paper-input label="url" value=formValues.imgUrl}}</p>
+          <p class="edit">{{paper-input label="Name" value=formValues.name}}</p>
+          <p class="edit">{{paper-input label="Description" value=formValues.description}}</p>
 
-  {{#link-to "adminevents.prizes.index" class="btn"}}Cancel{{/link-to}}
+          {{#link-to "adminevents.prizes.index" class="btn btn-save-edit"}}Cancel{{/link-to}}
 
-  <button class="btn btn-save">Save</button>
-{{/simple-form}}
+          <button class="btn btn-save-edit">Save</button>
+        {{/simple-form}}
+      </div>
+    </div>
+  </div>
+</div>

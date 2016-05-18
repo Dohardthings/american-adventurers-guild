@@ -2,41 +2,43 @@
   <h2 class="new-title">New Event</h2>
 </div>
 
-<div class="form-container">
-  {{#simple-form class="new-event__form" onsubmit=(action saveEvent) as |event|}}
+<div class="event-container">
+  <div class="form-container">
+    {{#simple-form class="new-event__form" onsubmit=(action saveEvent) as |event|}}
 
-    <p class="form-input">
-      <label class="form-label">Event Name</label>
-      {{input class="input-field" type="text" placeholder="Name" value=event.name}}
-    </p>
+      <p class="form-input">
+        <label class="form-label">Event Name</label>
+        {{input class="input-field" type="text" placeholder="Name" value=event.name}}
+      </p>
 
-    <p class="form-input">
-      <label class="form-label">Event Type</label>
-      {{input class="input-field" type="text" placeholder="Type" value=event.type}}
-    </p>
+      <p class="form-input">
+        <label class="form-label">Event Type</label>
+        {{input class="input-field" type="text" placeholder="Type" value=event.type}}
+      </p>
 
-    <p class="form-input">
-      <label class="form-label">Event Description</label>
-      {{textarea class="input-field" placeholder="Desc." value=event.description}}
-    </p>
+      <p class="form-input">
+        <label class="form-label">Event Description</label>
+        {{textarea class="input-field" placeholder="Desc." value=event.description}}
+      </p>
 
-    <p class="form-input">
-      <label class="form-label">Event Cost</label>
-      {{input class="input-field" type="text" placeholder="Cost" value=event.Cost}}
-    </p>
+      <p class="form-input">
+        <label class="form-label">Event Cost</label>
+        {{input class="input-field" type="text" placeholder="Cost" value=event.Cost}}
+      </p>
 
-    <p class="form-input">
-      <label class="form-label">Estimated Time to Complete</label>
-      {{input class="input-field" type="text" placeholder="ETC" value=event.etc}}
-    </p>
+      <p class="form-input">
+        <label class="form-label">Estimated Time to Complete</label>
+        {{input class="input-field" type="text" placeholder="ETC" value=event.etc}}
+      </p>
 
-    <p class="form-input">
-      <label class="form-label">Search Area</label>
-      {{input class="input-field" type="text" placeholder="Search Area." value=event.searchArea}}
-    </p>
+      <p class="form-input">
+        <label class="form-label">Search Area</label>
+        {{input class="input-field" type="text" placeholder="Search Area." value=event.searchArea}}
+      </p>
 
-    <div class="btn-container">
-      <button class="btn save-btn">Save</button>
-    </div>
-  {{/simple-form}}
+      <div class="btn-container">
+        <button class="btn save-btn">Save</button>
+      </div>
+    {{/simple-form}}
+  </div>
 </div>

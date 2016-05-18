@@ -1,17 +1,27 @@
-<h1 class="title-container">Edit Event</h1>
+<div class="main-container">
+  <div class="content-container">
 
-<button {{action toggle model}} class="btn btn-save">Toggle Active</button>
+
+<div class="event-container">
+  <h1 class="event-title">Edit Event</h1>
+
+  <div class="prize-container">
+    <button {{action toggle model}} class="btn btn-save">Toggle Active</button>
 
 
-{{#simple-form class="registration" startingValues=model onsubmit=(action saveEvent model) as |formValues|}}
-  {{paper-input label="Name" value=formValues.name}}
-  {{paper-input label="Type" value=formValues.type}}
-  {{paper-input label="Description" value=formValues.description}}
-  {{paper-input label="Cost" value=formValues.cost}}
-  {{paper-input label="Time" value=formValues.etc}}
-  {{paper-input label="Search Area" value=formValues.searchArea}}
+    {{#simple-form class="registration" startingValues=model onsubmit=(action saveEvent model) as |formValues|}}
+      <p class="edit">{{paper-input label="Name" value=formValues.name}}</p>
+      <p class="edit">{{paper-input label="Type" value=formValues.type}}</p>
+      <p class="edit">{{paper-input label="Description" value=formValues.description}}</p>
+      <p class="edit">{{paper-input label="Cost" value=formValues.cost}}</p>
+      <p class="edit">{{paper-input label="Time" value=formValues.etc}}</p>
+      <p class="edit">{{paper-input label="Search Area" value=formValues.searchArea}}</p>
 
-  {{#link-to "adminevents" class="btn"}}Cancel{{/link-to}}
+      {{#link-to "adminevents" class="btn btn-save-edit"}}Cancel{{/link-to}}
 
-  <button class="btn btn-save">Save</button>
-{{/simple-form}}
+      <button class="btn btn-save-edit">Save</button>
+    {{/simple-form}}
+  </div>
+</div>
+  </div>
+</div>
