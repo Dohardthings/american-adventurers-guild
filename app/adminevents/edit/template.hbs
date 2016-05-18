@@ -6,8 +6,6 @@
   <h1 class="event-title">Edit Event</h1>
 
   <div class="prize-container">
-    <button {{action toggle model}} class="btn btn-save">Toggle Active</button>
-
 
     {{#simple-form class="registration" startingValues=model onsubmit=(action saveEvent model) as |formValues|}}
       <p class="edit">{{paper-input label="Name" value=formValues.name}}</p>
