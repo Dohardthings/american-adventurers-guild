@@ -11,10 +11,15 @@
 </div>
 
 <div class="username-container">
-  <p class="show-username">
-    Welcome, {{session.data.authenticated.user.username}}
-    {{#link-to "logout" class="logout"}}Logout{{/link-to}}
-  </p>
+
+  {{#if session.isAuthenticated}}
+
+    <p class="show-username">
+      Welcome, {{session.data.authenticated.user.username}}
+      {{#link-to "logout" class="logout"}}Logout{{/link-to}}
+    </p>
+
+  {{/if}}
 
 </div>
 
@@ -37,7 +42,7 @@
   </div>
 </nav>
 
-{{outlet}}
+{{liquid-outlet}}
 
 <footer>
   <p class="cool-link-text">Here are a few other places to find out about treasure hunting!</p>
