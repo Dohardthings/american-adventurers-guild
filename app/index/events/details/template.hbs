@@ -20,8 +20,6 @@
 
         {{#if model.available}}
           <p class="available">No adventurers currently on this quest.</p>
-        {{else}}
-          <p class="not-available">Adventurers are already seeking this treasure.</p>
         {{/if}}
         <p>
           Price: ${{model.cost}}
@@ -29,9 +27,14 @@
         <div class="buy-container">
 
           {{#if model.available}}
-          <button {{action buyThis model.id}} class="btn btn-save">Purchase</button>
+            <button {{action buyThis model.id}} class="btn btn-save">Purchase</button>
           {{else}}
-          <p class="not-available">This event is unavailable for purchase.</p>
+            {{#if (is-matching user.id model.seekingUser.id)}}
+              <p class="available">{{#link-to "index.events.details.clues"}}See Clues{{/link-to}}</p>
+            {{else}}
+              <p class="not-available">This Adventure has been purchased!  Adventurers are now seeking this treasure.</p>
+              <p class="not-available">This event is unavailable for purchase.</p>
+            {{/if}}
           {{/if}}
         </div>
       </div>

@@ -16,6 +16,14 @@ export default Model.extend({
     }, true);
   }),
 
+  currentPurchase: Ember.computed('purchases.@each.user', function() {
+    return this.get(`purchases`).find((purchase) => {
+      return purchase.get(`inProgress`);
+    })
+  }),
+
+  seekingUser: Ember.computed.alias('currentPurchase.endUser'),
+
   description: attr(),
   searchArea: attr(),
   prize: belongsTo(`prize`),
