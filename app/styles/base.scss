@@ -1,5 +1,5 @@
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
-
+@import url(https://fonts.googleapis.com/css?family=Cinzel+Decorative);
 html, body {
   margin: 0;
   text-shadow: 1px 1px 1px #000000;
@@ -14,7 +14,7 @@ a {
 
 .site-heading {
   color: $brand-orange;
-  font-family: herculanum;
+  font-family: 'Cinzel Decorative';
   text-align: center;
 }
 
@@ -39,7 +39,7 @@ img {
   outline: none;
   background: transparent;
   color: $brand-orange;
-  font-family: herculanum;
+  font-family: 'Cinzel Decorative';
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 2em;
@@ -78,7 +78,7 @@ img {
     width: 0;
     height: 86%;
     background: transparent;
-    box-shadow: 0 0 15px 3px white;
+    box-shadow: 0 0 15px 5px white;
     content: '';
     opacity: 0;
 
