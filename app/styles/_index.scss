@@ -1,15 +1,15 @@
 .top-container {
-border-bottom: silver 10px solid;
+  border-bottom: $brand-silver 10px solid;
 
 }
 
 .site-container {
-  color: white;
-  background: rgba(0,0,0,0.7);
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   flex: 1;
+  flex-direction: column;
+  min-height: 100vh;
+  background: $site-container;
+  color: $brand-white;
 }
 
 .link-list {
@@ -27,13 +27,13 @@ border-bottom: silver 10px solid;
 
 .cool-link {
   padding: 0.3rem;
-  border: white 1px solid;
+  border: $brand-white 1px solid;
   color: $brand-orange;
 
   &:hover {
     border: 1px solid transparent;
-    background: rgba(254, 166, 75, 0.37);
-    color: white;
+    background: $bottom-link-background;
+    color: $brand-white;
   }
 }
 
@@ -46,11 +46,11 @@ border-bottom: silver 10px solid;
 .title-container {
   display: flex;
   justify-content: center;
-  margin: auto;
   width: 90%;
-  border: 5px solid rgba(255, 255, 255, 0.54);
-  background: rgba(42, 45, 56, 0.82);
-  box-shadow: 10px 10px 30px black;
+  margin: auto;
+  border: 5px solid $title-container-border;
+  background: $title-container-background;
+  box-shadow: 10px 10px 30px $box-shadow-color;
 }
 
 .heading-container {
@@ -62,50 +62,46 @@ border-bottom: silver 10px solid;
 
 .username-container {
   width: 35%;
-  text-align: right;
   margin: auto;
   text-align: center;
 }
 
-.show-username {
-
-}
 
 .how-container {
   width: 90%;
   margin: auto;
-  border: 5px solid rgba(255, 255, 255, 0.54);
-  background: rgba(42, 45, 56, 0.82);
-  box-shadow: 10px 10px 30px black;
   margin-bottom: 2rem;
+  border: 5px solid $title-container-border;
+  background: $title-container-background;
+  box-shadow: 10px 10px 30px $box-shadow-color;
 }
 
 .how-list {
-  color: white;
   margin: auto;
-  list-style: none;
   margin-right: 1rem;
+  color: $brand-white;
+  list-style: none;
 }
 
 .how-item-sublist {
-  list-style: none;
   margin-right: 1rem;
+  list-style: none;
 }
 
 .who {
   width: 90%;
   margin: auto;
-  border: 5px solid rgba(255, 255, 255, 0.54);
-  background: rgba(42, 45, 56, 0.82);
-  box-shadow: 10px 10px 30px black;
+  border: 5px solid $title-container-border;
+  background: $title-container-background;
+  box-shadow: 10px 10px 30px $box-shadow-color;
 
 }
 
 .about-us {
-  color: white;
-  font-size: 1.2rem;
-  margin-left: 2rem;
   margin-right: 2rem;
+  margin-left: 2rem;
+  color: $brand-white;
+  font-size: 1.2rem;
 }
 
 .who-heading {
@@ -121,8 +117,8 @@ border-bottom: silver 10px solid;
 
   &__link {
     flex: 1;
-    text-align: center;
     margin: 1rem;
+    text-align: center;
   }
 }
 
@@ -134,7 +130,7 @@ footer {
   color: $brand-orange;
 
   &:hover {
+    color: $brand-white;
     text-decoration: underline;
-    color: white;
   }
 }
