@@ -3,12 +3,12 @@ import attr from 'ember-data/attr';
 import { hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
-  email: attr('string'),
-  password: attr('string'),
-  username: attr('string'),
-  phoneNumber: attr('number'),
-  admin: attr('boolean'),
-  purchase: hasMany('purchase'),
+  email: attr(`string`),
+  password: attr(`string`),
+  username: attr(`string`),
+  phoneNumber: attr(`number`),
+  admin: attr(`boolean`),
+  purchase: hasMany(`purchase`),
 
   isAdmin: Ember.computed({
     get() {

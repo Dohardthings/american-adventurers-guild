@@ -11,7 +11,12 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "deploy": "ember build -e production && cp dist/index.html dist/200.html && surge dist american-adventurers.surge.sh"
+    "deploy": "ember build -e production && cp dist/index.html dist/200.html && surge dist american-adventurers.surge.sh",
+    "selenium-install": "node_modules/.bin/selenium-standalone install",
+    "selenium": "node_modules/.bin/selenium-standalone start",
+    "tester": "./node_modules/.bin/wdio wdio.conf.js"
+
+
   },
   "repository": "",
   "engines": {
@@ -21,6 +26,8 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
+    "chai": "^4.1.1",
+    "cucumber": "^2.3.1",
     "ember-ajax": "0.7.1",
     "ember-cli": "^2.5.0",
     "ember-cli-app-version": "^1.0.0",
@@ -60,6 +67,15 @@
     "eslint-config-rtablada": "^1.0.1",
     "liquid-fire": "0.23.0",
     "loader.js": "^4.0.1",
-    "sass-lint": "^1.6.2"
+    "mocha": "^3.5.0",
+    "sass-lint": "^1.6.2",
+    "selenium-standalone": "^6.6.0",
+    "wdio-cucumber-framework": "^0.3.1",
+    "wdio-mocha-framework": "^0.5.10",
+    "wdio-spec-reporter": "^0.1.0",
+    "webdriverio": "^4.8.0"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^3.4.0"
   }
 }

@@ -1,11 +1,13 @@
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+
 @import url(https://fonts.googleapis.com/css?family=Cinzel+Decorative);
+
 html, body {
   margin: 0;
-  text-shadow: 1px 1px 1px #000000;
   background: url('http://img.mota.ru/upload/wallpapers/2012/10/31/09/01/33186/mota_ru_2103105-1024x768.jpg') no-repeat center center fixed;
 
   background-size: cover;
+  text-shadow: 1px 1px 1px #000000;
 }
 
 a {
@@ -50,7 +52,7 @@ img {
 
   box-shadow: 0 0 0 0 transparent;
 
- @include transition(all 0.2s ease-in);
+  @include transition(all 0.2s ease-in);
 
   &:hover {
     background-color: $col-primary;
