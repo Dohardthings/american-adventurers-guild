@@ -3,7 +3,7 @@
 <div class="main-container">
   <div class="table-container">
     <div class="page-title-container">
-      <h1 class="page-title">Events</h1>
+      <h1 id="events" class="page-title">Events</h1>
     </div>
     <table class="table">
       <thead class="table-head">
@@ -35,7 +35,7 @@
               {{/if}}
             </td>
             <td class="table-item__button">
-              {{#link-to "index.events.details" event.id class="btn details-link"}}Details{{/link-to}}
+              {{#link-to "index.events.details" event.id class="btn details-link" }}Details{{/link-to}}
             </td>
           </tr>
         {{/each}}
