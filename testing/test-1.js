@@ -1,4 +1,5 @@
 var expect = require(`chai`).expect;
+
 describe(`Are elements visible`, function () {
   describe(`Visibility`, function () {
     it(`should show that all elements are visible with true`, function () {
@@ -15,9 +16,9 @@ describe(`Are elements visible`, function () {
       expect(browser.getUrl(`http://localhost:4200/login`));
 
       // Fill in Input for Name
-      browser.element(`#input-ember648`).setValue(`ihatemyjob4@hotmail.com`);
+      browser.element(`#input-username`).setValue(`ihatemyjob4@hotmail.com`);
       // Fill in Input for Subject
-      browser.element(`#input-ember658`).setValue(`daniel`);
+      browser.element(`#input-password`).setValue(`daniel`);
       // Click on Submit button
       expect(browser.isVisible(`#login`)).to.be.true;
       browser.click(`#login`);
@@ -27,4 +28,12 @@ describe(`Are elements visible`, function () {
       expect(browser.isVisible(`#events`)).to.be.true;
     });
   });
+
+  // describe(`Visibility`, function () {
+  //   it(`should show that all elements are visible with true`, function () {
+  //     browser.url(`http://localhost:4200/`);
+  //     expect(browser.isVisible(`//*[@id="ember858"]`)).to.be.true;
+  //     expect(browser.isVisible(`//*[@id="ember886"]`)).to.be.true;
+  //   });
+  // });
 });
