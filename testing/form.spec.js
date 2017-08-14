@@ -1,10 +1,11 @@
 
 var expect = require(`chai`).expect;
 var FormPage = require(`./pageobjects/form.page`);
+var EventsPage = require(`./pageobjects/events.page`);
 
 describe(`auth form`, function () {
   it(`should deny access with wrong creds`, function () {
-    browser.url(`localhost:4200/login`);
+    FormPage.open();
     FormPage.username.setValue(`foo@emir.com`);
     FormPage.password.setValue(`bar`);
     FormPage.submit();
@@ -14,12 +15,11 @@ describe(`auth form`, function () {
   });
 
   it(`should allow access with correct creds`, function () {
-    browser.url(`localhost:4200/login`);
+    FormPage.open();
     FormPage.username.setValue(`ihatemyjob4@hotmail.com`);
     FormPage.password.setValue(`daniel`);
     FormPage.submit();
-    browser.pause(4000);
-
+    browser.waitForVisible(`#events`);
     expect(browser.isVisible(`#events`)).to.be.true;
   });
 });

@@ -6,7 +6,6 @@ var LoginPage = Object.create(Page, {
   username: { get() { return browser.element(`#input-username`); } },
   password: { get() { return browser.element(`#input-password`); } },
   form: { get() { return browser.element(`#login`); } },
-  flash: { get() { return browser.element(`#flash`); } },
     /**
      * define or overwrite page methods
      */

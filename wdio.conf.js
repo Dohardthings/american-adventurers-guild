@@ -1,3 +1,5 @@
+require(`babel-core/register`);
+
 exports.config = {
 
     //
@@ -9,8 +11,9 @@ exports.config = {
     // NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
+  debug: process.env.DEBUG,
   specs: [
-    `./testing/form.spec.js`,
+    `./testing/form.spec2.js`,
   ],
     // Patterns to exclude.
   exclude: [
@@ -75,7 +78,7 @@ exports.config = {
   baseUrl: `localhost:4200`,
     //
     // Default timeout for all waitFor* commands.
-  waitforTimeout: 30000,
+  waitforTimeout: 90000,
     //
     // Default timeout in milliseconds for request
     // if Selenium Grid doesn't send response
@@ -118,13 +121,14 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-  reporters: [`dot`],
+  reporters: [`dot`, `spec`],
 
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
   mochaOpts: {
     ui: `bdd`,
+    timeout: 90000,
   },
     //
     // =====

@@ -14,8 +14,10 @@
     "deploy": "ember build -e production && cp dist/index.html dist/200.html && surge dist american-adventurers.surge.sh",
     "selenium-install": "node_modules/.bin/selenium-standalone install",
     "selenium": "node_modules/.bin/selenium-standalone start",
-    "tester": "./node_modules/.bin/wdio wdio.conf.js"
-
+    "tester": "./node_modules/.bin/wdio wdio.conf.js",
+    "tester-watch": "./node_modules/.bin/wdio wdio.conf.js --watch",
+    "chromedriver": "node_modules/selenium-standalone/.selenium/chromedriver/2.30-x64-chromedriver --url-base=/wd/hub --port=4444",
+    "chrome": "wdio repl chrome"
 
   },
   "repository": "",
@@ -65,6 +67,7 @@
     "ember-with-service": "1.1.0",
     "eslint": "^2.8.0",
     "eslint-config-rtablada": "^1.0.1",
+    "eslint-plugin-react": "^7.2.0",
     "liquid-fire": "0.23.0",
     "loader.js": "^4.0.1",
     "mocha": "^3.5.0",
