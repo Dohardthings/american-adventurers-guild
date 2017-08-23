@@ -48,6 +48,11 @@ exports.config = {
     maxInstances: 5,
         //
     browserName: `chrome`,
+    // browserName: `firefox`,
+    // version: 55.0.2,
+    // platform: `ANY`,
+    // javascriptEnabled: true,
+    // marionette: true,
   }],
     //
     // ===================
@@ -75,7 +80,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
-  baseUrl: `localhost:4200`,
+  baseUrl: `http://localhost:4200`,
     //
     // Default timeout for all waitFor* commands.
   waitforTimeout: 90000,

@@ -17,8 +17,8 @@
     "tester": "./node_modules/.bin/wdio wdio.conf.js",
     "tester-watch": "./node_modules/.bin/wdio wdio.conf.js --watch",
     "chromedriver": "node_modules/selenium-standalone/.selenium/chromedriver/2.30-x64-chromedriver --url-base=/wd/hub --port=4444",
-    "chrome": "wdio repl chrome"
-
+    "chrome": "wdio repl chrome",
+    "geckodriver": "node_modules/selenium-standalone/.selenium/geckodriver/0.17.0-x64-geckodriver --url-base=/wd/hub --port=4444"
   },
   "repository": "",
   "engines": {
@@ -68,6 +68,7 @@
     "eslint": "^2.8.0",
     "eslint-config-rtablada": "^1.0.1",
     "eslint-plugin-react": "^7.2.0",
+    "geckodriver": "^1.8.0",
     "liquid-fire": "0.23.0",
     "loader.js": "^4.0.1",
     "mocha": "^3.5.0",

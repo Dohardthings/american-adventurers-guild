@@ -1,6 +1,6 @@
 import Page from './page';
 import UiMap from './login.page.uimap';
-let elements;
+// let elements;
 
 export default class LoginPage extends Page {
 
